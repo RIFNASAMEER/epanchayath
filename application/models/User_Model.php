@@ -17,8 +17,15 @@ class User_Model extends CI_Model
 	public function get_where($where)
 	{
 		$this->db->where($where);
-		$this->db->get('users');
-		// var_dump($this->db->get_compiled_select('users'));
+		$query = $this->db->get('users');
+
+		if ($query->num_rows() >= 1) {
+			return $query->result();
+		}
+		else
+		{
+			return FALSE;
+		}
 	}
 }
 

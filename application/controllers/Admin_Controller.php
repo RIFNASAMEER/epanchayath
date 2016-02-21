@@ -38,7 +38,14 @@ class Admin_Controller extends CI_Controller
 
 			$where = ['username' => $username,'password' => $password];
 				
-			$this->User_Model->get_where($where);
+			if ($this->User_Model->get_where($where) != FALSE)
+			{
+				echo 'login success';
+			}
+			else
+			{
+				echo 'login failed';
+			}
 
 
 		}
