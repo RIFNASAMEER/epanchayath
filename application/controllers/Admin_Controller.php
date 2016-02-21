@@ -39,9 +39,14 @@ class Admin_Controller extends CI_Controller
 			$where = ['username' => $username,'password' => $password];
 				
 			$this->User_Model->get_where($where);
-
-
 		}
 	}
+
+
+
+	public function add_employee()
+	{
+		$this->load->view('admin/add_employee');
+	}	
 }
  ?>
