@@ -5,8 +5,8 @@
 </head>
 <body>
 
-<?php echo validation_errors();  ?>
 	<form action="<?php echo base_url('Employee_Controller/add'); ?>" method="post" accept-charset="utf-8">
+		<?php echo validation_errors();  ?>
 		
 		<label for="name">Name</label>
 			<input type="text" name="name" id="name"><br>
