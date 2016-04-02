@@ -20,7 +20,7 @@
 		</thead>
 		<tbody>
 		<?php
-		if(isset($result))
+		if(isset($result) && !empty($result))
 		{
 		 foreach ($result as $value){ ?>
 				<tr>
