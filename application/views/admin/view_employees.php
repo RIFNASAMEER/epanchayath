@@ -27,13 +27,14 @@
 					<td><?php echo $value->id; ?></td>
 					<td><?php echo $value->name ?></td>
 					<td><?php echo $value->designation; ?></td>
+					
 					<?php 
 					foreach ($address as $values) {
-						if($value->id == $values->id){
+						if($values->id == $value->address_id){
 					?>
 					<td><?php echo $values->gender; ?></td>
 					<td><?php echo $values->address ?></td>
-					<td><?php echo $values->place?></td>
+					<td><?php echo $values->place ?></td>
 					<td><?php echo $values->mobileno; ?></td>
 					<td><a href= "<?php echo base_url('Employee_Controller/edit_data/').'/'.$value->id;?>"> edit
 					|<a href="<?php echo base_url('Employee_Controller/delete/').'/'.$value->id;?>">delete</a></td>
