@@ -15,8 +15,12 @@
 		</thead>
 		<tbody>
 		<?php
+<<<<<<< HEAD
 		if(isset($result))
 		
+=======
+		if(isset($result) && !empty($result))
+>>>>>>> cb2e084ac773a991675782c3219f89a5084214fc
 		{
 			
 		foreach ($result as $value){ ?>
