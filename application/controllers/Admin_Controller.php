@@ -61,6 +61,12 @@ class Admin_Controller extends Check_Logged
 				];
 				$this->session->set_userdata('logged_in',$userdata);
 				redirect(base_url('Admin_Controller/login'));
+			$where = ['username' => $username,'password' => $password];
+				
+
+			if ($this->User_Model->get_where($where) != FALSE)
+			{
+				echo 'login success';
 			}
 			else{
 				$data['message']='invalid username or password';
@@ -68,7 +74,7 @@ class Admin_Controller extends Check_Logged
 			}
 
 
-		}
+	}
 
 	}
 
