@@ -20,6 +20,7 @@ class Employee_Controller extends CI_Controller
 
 
 	}
+	
 
 
 

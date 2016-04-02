@@ -19,8 +19,9 @@ class Employee_model extends CI_Model
 		{
 			return $this->db->insert_id();
 		}
-		else
+		else{
 			return FALSE;
+		}
 	}
 
 

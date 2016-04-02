@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>view employess</title>
+	<title>view employees</title>
 </head>
 <body>
 	<table border="1px">

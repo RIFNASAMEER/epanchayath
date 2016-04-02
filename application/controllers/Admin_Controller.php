@@ -3,28 +3,45 @@
 /**
 * 
 */
-class Admin_Controller extends CI_Controller
+require_once(APPPATH.'controllers/Check_Logged.php');
+
+class Admin_Controller extends Check_Logged
 {
 
-	public function __construct()
+    function __construct()
 	{
 		parent::__construct();
 		$this->load->helper(['url','form']);
-		$this->load->library(['form_validation']);
+		$this->load->library(['form_validation','session']);
 
 		$this->load->model('User_Model');
+		$this->load->model('Notification_Model');
+		$this->load->model('Complaint_Model');
 
+	}
+
+
+	public function generate()
+	{
+		var_dump(APPPATH);
+		var_dump(md5('admin'));
+        var_dump(hash('sha152', 'admin'));
 	}
 
 	public function login()
 	{
-		$this->load->view('admin/login');
+		if ($this->logged ==true) {
+			$this->load->view('admin/dashboard');
+		}
+		else{
+           $this->load->view('admin/login');
+       }
 	}
 
 
 	public function verify()
 	{
-		$this->form_validation->set_rules('username', 'User name', 'required');
+		$this->form_validation->set_rules('username', 'Username', 'required');
 		$this->form_validation->set_rules('password', 'Password', 'required');
 
 		if($this->form_validation->run() === FALSE)
@@ -35,31 +52,34 @@ class Admin_Controller extends CI_Controller
 		{
 			$username = $this->input->post('username');
 			$password = $this->input->post('password');
+            $password= md5($password);
 
-			$where = ['username' => $username,'password' => $password];
-				
-<<<<<<< HEAD
-			if ($this->User_Model->get_where($where) != FALSE)
-			{
-				echo 'login success';
+			if($this->User_Model->login($username,$password,'admin')){
+				$userdata = [
+				'username' =>$username,
+				'logged_in' =>true
+				];
+				$this->session->set_userdata('logged_in',$userdata);
+				redirect(base_url('Admin_Controller/login'));
 			}
-			else
-			{
-				echo 'login failed';
+			else{
+				$data['message']='invalid username or password';
+				$this->load->view('admin/login',$data);
 			}
 
 
-=======
-			$this->User_Model->get_where($where);
->>>>>>> 48b7bdb3a9ed4c71ebd1bafbfdb2b2704604fad1
 		}
+
 	}
 
 
 
-	public function add_employee()
-	{
-		$this->load->view('admin/add_employee');
-	}	
+	public function logout()
+    {
+		$this->session->set_userdata('logged_in',FALSE);
+		$this->session->sess_destroy();
+
+		redirect(base_url('Admin_Controller/login'));
+	}
 }
  ?>
