@@ -30,6 +30,10 @@ class Home extends CI_Controller
 	{
 		$this->load->view('add_birth_death_form');
 	}
+	public function add_pension()
+	{
+		$this->load->view('add_pension');
+	}
 }
 
 
