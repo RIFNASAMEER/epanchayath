@@ -6,6 +6,21 @@
 	<title>view permit</title>
 	<link rel="stylesheet" href="">
 </head>
+ <style type="text/css">
+    .bs-example{
+      margin: 50px ;
+      width:50%;
+      padding: 18px 18px;
+    }
+  </style>
+  <!--  <form name="complaints"  method="post" action="<?php //echo base_url(''Complaint_Controller/add''); ?>"> -->
+  <div class="bs-example">
+ <div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Complaint Registration</h3>
+    </div><div class="panel-body">
+  <?php echo form_open(base_url('Complaint_Controller/add'),["class"=>"form-horizontal"]); ?>
+    <div class="form-group">
 <body>
 	<label for="name">Name</label>
 	<input type="text" name="name" id="name"><br>			
