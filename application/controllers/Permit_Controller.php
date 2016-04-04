@@ -81,19 +81,6 @@ class Permit_Controller extends CI_Controller
 			$details=$this->input->post('details');
 
 		}
-
-
-	
-	}
+    }
 }
-
-
-
-
-
-
-
-
-
-
- ?>
+?>

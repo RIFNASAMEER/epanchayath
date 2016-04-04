@@ -5,11 +5,11 @@
 </head>
 <body>
     <form name="application form" id="bdform" method="post" action="<?php echo base_url('');?>">
-        <label for="type"></label>
-           Select Type Of Form :<input type="radio" id="Birth"value="Birth Form">Birth Form</input>
-                    <input type="radio" value="Death form" id="Death">Death Form</input><br>
-		<label for="applicant name"></label>
-			Full Name Of The Requester: <input type="text" name="appliant_name" id="appliant_name"></input><br>
+        <label for="type">
+           Select Type Of Form :<input type="radio" id="Birth"value="Birth Form">Birth Form
+                    <input type="radio" value="Death form" id="Death">Death Form</label><br>
+		<label for="applicant name">
+			Full Name Of The Requester: <input type="text" name="appliant_name" id="appliant_name"></label><br>
 		<label for="gender"></label>
 		    Gender :<input type="radio" value="M">Male</input>
                     <input type="radio" value="F">Female</input><br>
