@@ -72,15 +72,9 @@ class Admin_Controller extends Check_Logged
 				$data['message']='invalid username or password';
 				$this->load->view('admin/login',$data);
 			}
-
-
-	}
-
-	}
-
-
-
-	public function logout()
+        }
+    }
+    public function logout()
     {
 		$this->session->set_userdata('logged_in',FALSE);
 		$this->session->sess_destroy();

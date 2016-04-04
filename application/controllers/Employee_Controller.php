@@ -21,10 +21,7 @@ class Employee_Controller extends CI_Controller
 
 	}
 	
-
-
-
-	public function add()
+ public function add()
 	{
 		$this->form_validation->set_rules('name', 'Name','required');
 		$this->form_validation->set_rules('gender', 'Gender','required');
