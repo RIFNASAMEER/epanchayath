@@ -2,65 +2,158 @@
 <html>
 <head>
 	<title>Application Form For Birth/Death Certificate</title>
+	<link rel="stylesheet" href="<?php echo base_url('bootstrap/css/bootstrap.min.css') ?>">
+	<link rel="stylesheet" href="<?php echo base_url('bootstrap/css/bootstrap-theme.min.css') ?>">
+
 </head>
 <body>
-    <form name="application form" id="bdform" method="post" action="<?php echo base_url('');?>">
-        <label for="type">
-           Select Type Of Form :<input type="radio" id="Birth"value="Birth Form">Birth Form
-                    <input type="radio" value="Death form" id="Death">Death Form</label><br>
-		<label for="applicant name">
-			Full Name Of The Requester: <input type="text" name="appliant_name" id="appliant_name"></label><br>
-		<label for="gender"></label>
-		    Gender :<input type="radio" value="M">Male</input>
-                    <input type="radio" value="F">Female</input><br>
-		<label for="Address"></label>
-			Applicant Address : <textarea name="address" id="address"></textarea><br>
-		<label for="place"></label>
-		    Place : <input type="text" name="place" id="place"></input><br>
-		<label for="mobileno"></label>
-		    Mobile Number : <input type="text" name="mobileno" id="mobileno"></input><br>
-		<label for="email"></label>
-		    E-mail : <input type="text" name="email" id="email"></input><br>
-        <label for="requester name"></label>
-			Full Name Of The Requester: <input type="text" name="appliant_name" id="appliant_name"></input><br>
-		<label for="house no"></label>
-		    House Number: <input type="text" name="house_no" id="house_no"></input><br> 
-		<label for="ward no"></label>
-			Ward Number: <input type="text" name="ward_no" id="ward_no"></input><br>
-		<label for="village"></label>
-		    Village: <input type="text" name="house_no" id="house_no"></input><br> 
-		<label for="postoffice"></label>
-		    Postoffice: <input type="text" name="postoffice" id="postoffice"></input><br>
-		<label for="pincode"></label>
-		    Pincode: <input type="text" name="pincode" id="pincode"></input><br>
-		<label for="district"></label>
-		   District : <input type="text" name="district" id="district"></input><br>
-	    <label for="Name Of The Death/Birth Person"></label>
-		   Name Of The Death/Birth Person : <input type="text" name="name" id="name"></input><br> 
-		<label for="Name Of Father/Mother"></label> 
-		    Name Of Father/Mother :<input type="text" name="father_mother" id="father_mother"></input><br>
-		<label for="Date Of Death/Birth"></label>
-		    Date Of Death/Birth :<input type="text" name="date" id="date"></input><br>
-		<label for="Purpose Of The Certificate"></label>
-		    Purpose Of The Certificate :<input type="text" name="purpose" id="purpose"></input><br>
-        <label for="Name Of Registrar Office"></label>
-            Name Of Registrar Office :<input type="text" name="registrar"></input><br>
-        <label for="Registration Number"></label>
-            Registration Number:<input type="text" name="registration_no" id="registration_no"></input><br>
-        <label for="Localbody type"></label>
-            Localbody Type:<select name="Localbodytype">
-               <option value="Panchayath">Panchayath</option>
-               <option value="Municipality">Municipality</option>
-               <option value="Corporation">Corporation</option>
-            </select><br>
-        <label for="Localbody"></label>
-            Place Of Birth/Death :<input type="text" name="localbody" id="localbody"></input><br>
-        <label for="gender"></label>
-            Gender :<input type="radio" id="bgender"value="M">Male</input>
-                    <input type="radio" value="F" id="bgender">Female</input><br>
-        <label for="Address"></label>
-             Address :<textarea name="baddress" id="baddress"></textarea><br>
-        <button type="submit">Submit</button>
+	<style type="text/css">
+	    .bs-example{
+	      margin: 50px ;
+	      width:50%;
+	      padding: 18px 18px;
+	    }
+	</style>
+  <div class="bs-example">
+    <div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Death/Birth Certificat</h3>
+    </div>
+    <div class="panel-body">
+    <?php echo form_open(base_url('Complaint_Controller/add'),["class"=>"form-horizontal"]); ?>
+    	<div class="form-group">
+    		  		<label for="type"  class="col-sm-4 control-label">Select Type Of Form :</label>
+    		  		<label class="radio-inline control-labe ">
+    		  	  	<input type="radio" name="optradio">Death</label>
+    		   		<label class="radio-inline control-label">
+    		      	<input type="radio" name="optradio">Birth</label>
+    		    </div>
+    			<div class="form-group row">
+    			   <label for="" class="control-label col-xs-4">FullName:</label>
+    	           <div class="col-xs-8">
+    	           		<input type="text" name="name" class="form-control">
+    	           </div>
+    	        </div>
+    	        <div class="form-group">
+    				<label for="Address" class="control-label col-xs-4">ApplicantAddress:</label>
+    			    <div class="col-xs-8">
+    				<textarea name="address" class="form-control">
+    				</textarea><br>
+    				</div>
+    			</div>
+    			<div class="form-group">
+    			    <label for="relationship" class="control-label col-xs-4"> Relationship </label>
+    				<div class="col-xs-8">
+    					<input type="text" name="relationship" class="form-control"><br>
+    				</div>
+    			</div>
+    			<div class="form-group">
+    			    <label for="place" class="control-label col-xs-4"> Place: </label>
+    				<div class="col-xs-8">
+    					<input type="text" name="place" class="form-control"><br>
+    				</div>
+    			</div>
+    			<div class="form-group">
+    			    <label for="mobileno" class="control-label col-xs-4"> MobileNumber: </label>
+    				   	<div class="col-xs-8">
+    				   		<input type="text" name="mobileno" class="form-control"><br>
+    				   	</div>
+    			</div>
+    			<div class="form-group">
+    				<label for="email" class="control-label col-xs-4"> E-mail :</label>
+    			    <div class="col-xs-8">
+    			    	<input type="text" name="email" class="form-control"><br>
+    			    </div>
+    			</div>
+    			<div class="form-group">
+    				<label for="requester name" class="control-label col-xs-4">FullNameOfThe Requester:</label>
+    				<div class="col-xs-8">
+    					<input type="text" name="appliant_name" class="form-control"><br>
+    				</div>
+    			</div>
+    			<div class="form-group">
+    				<label for="house no" class="control-label col-xs-4">House Number:</label>
+    				<div class="col-xs-8"><input type="text" name="house_no" class="form-control"></input><br>
+    				</div>
+    			</div>
+    			<div class="form-group">
+    				<label for="ward no" class="control-label col-xs-4">Ward Number: </label>
+    				<div class="col-xs-8"><input type="text" name="ward_no"class="form-control"><br></div>
+    			</div>
+    			<div class="form-group">
+    				<label for="village" class="control-label col-xs-4">Village: </label>
+    				<div class="col-xs-8"><input type="text" name="house_no" class="form-control"></input><br></div> 
+    	
+    			</div>			
+    			<div class="form-group">
+    				<label for="postoffice" class="control-label col-xs-4">Postoffice:</label>
+    				<div class="col-xs-8"><input type="text" name="postoffice" class="form-control"></input><br></div>
+    			</div>
+    			<div class="form-group">
+    				<label for="pincode" class="control-label col-xs-4">Pincode:</label>
+    				<div class="col-xs-8"><input type="text" name="pincode" class="form-control"></input><br></div>
+    			</div>
+    			<div class="form-group">
+    				<label for="district" class="control-label col-xs-4"> District : </label>
+    				<div class="col-xs-8"><input type="text" name="district" class="form-control"></input><br></div>
+    			</div>
+    			<div class="form-group">
+    			    <label for="Name Of The Death/Birth Person" class="control-label col-xs-4"> Name Of The Death/Birth Person :</label>
+    				<div class="col-xs-8"><input type="text" name="name" class="form-control"></input><br> </div>
+    			</div>
+    			<div class="form-group">
+    				<label for="Name Of Father/Mother" class="control-label col-xs-4">Name Of Father/Mother :</label> 
+    				<div class="col-xs-8"><input type="text" name="father_mother" class="form-control"><br></div>
+    			</div>
+    			<div class="form-group">
+    				<label for="Date Of Death/Birth" class="control-label col-xs-4">Date Of Death/Birth :</label>
+    				<div class="col-xs-8"><input type="text" name="date" class="form-control"></input><br></div>
+    			</div>
+		<div class="form-group">
+			<label for="Purpose Of The Certificate" class="control-label col-xs-4">Purpose Of The Certificate:</label>
+			<div class="col-xs-8">
+				<input type="text" name="purpose" class="form-control"><br>
+			</div>
+		</div>
+		<div class="form-group">
+	        <label for="Name Of Registrar Office" class="control-label col-xs-4">Name Of Registrar Office:</label>
+	        <div class="col-xs-8"><input type="text" name="registrar"class="form-control"></input><br></div>
+        </div>
+        <div class="form-group">
+	        <label for="Registration Number" class="control-label col-xs-4">Registration Number:</label>
+	        <div class="col-xs-8"><input type="text" name="registration_no" class="form-control"><br></div>
+        </div>
+        <div class="form-group">
+	        <label for="Localbody type" class="control-label col-xs-4"> Localbody Type:</label>
+	        <div class="col-xs-8">
+	           <select name="Localbodytype" class = "form-control">
+	               <option value="Panchayath">Panchayath</option>
+	               <option value="Municipality">Municipality</option>
+	               <option value="Corporation">Corporation</option>
+	            </select><br>
+	        </div>
+        </div> 
+        <div class="form-group">
+	        <label for="Localbody" class="control-label col-xs-4"> Place Of Birth/Death :</label>
+	        <div class="col-xs-8"><input type="text" name="localbody" class="form-control"></input><br></div>
+        </div>
+         <div class="form-group">
+	        <label for="gender" class="control-label col-xs-4"> Gender: </label>
+    		<label class="radio-inline control-labe ">
+    		<input type="radio" name="optradio">Male</label>
+    	    <label class="radio-inline control-label">
+    	     <input type="radio" name="optradio">Female</label>
+		</div>
+		 <div class="form-group">
+			<label for="Address" class="control-label col-xs-4"> Address :</label>
+			<div class="col-xs-8"><textarea name="baddress" class="form-control"></textarea><br></div>
+		</div>
+		<div class="form-group">
+		 <div class="col-xs-offset-2 col-xs-8">
+			<button type="submit"class="btn btn-primary">Submit</button>
+		</div></div>
+
 	</form>
+	</div>
 </body>
 </html>
