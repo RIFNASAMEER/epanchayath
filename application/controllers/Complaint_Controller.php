@@ -42,7 +42,7 @@ class Complaint_Controller extends CI_Controller
 			];
 			if($this->Complaint_Model->add($data) !=FAlSE)
 			{
-			 var_dump('success');
+			 redirect(base_url('Complaint_Controller/view'));
 			}
 			else
 				redirect(base_url('Complaint_Controller/add'));

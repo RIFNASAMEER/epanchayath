@@ -13,14 +13,13 @@
       padding: 18px 18px;
     }
   </style>
-  <!--  <form name="complaints"  method="post" action="<?php //echo base_url(''Complaint_Controller/add''); ?>"> -->
   <div class="bs-example">
- <div class="panel panel-primary">
+  <div class="panel panel-primary">
     <div class="panel-heading">
         <h3 class="panel-title">Complaint Registration</h3>
     </div><div class="panel-body">
-  <?php echo form_open(base_url('Complaint_Controller/add'),["class"=>"form-horizontal"]); ?>
-    <div class="form-group">
+  <?php echo form_open(base_url('Permit_Controller/add'),["class"=>"form-horizontal", 'name'='permit',  'method'='post']); ?>
+<div class="form-group">
 <body>
 	<label for="name">Name
 	<div><input type="text" name="name" id="name"></div></label><br>			

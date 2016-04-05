@@ -35,7 +35,7 @@ class Notification_Controller extends CI_Controller
 			];
 			if($this->Notification_Model->add($data) != FALSE)
 			    {
-					var_dump('success');
+					redirect(base_url('Notification_Controller/view'));
 			    }
 				else
 					$this->load->view('admin/add_notification');

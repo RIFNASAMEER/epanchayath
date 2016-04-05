@@ -15,19 +15,13 @@
 		</thead>
 		<tbody>
 		<?php
-<<<<<<< HEAD
-		if(isset($result))
-		
-=======
-		if(isset($result) && !empty($result))
->>>>>>> cb2e084ac773a991675782c3219f89a5084214fc
+        if(isset($result) && !empty($result))
 		{
-			
-		foreach ($result as $value){ ?>
+			foreach ($result as $value){ ?>
 				<tr>
 					<td><?php echo $value->id; ?></td>
 					<td><?php echo $value->name; ?></td>
-					<td><?php echo $value->designation; ?></td>
+					<td><?php echo $value->designation;} ?></td>
 				</tr>			
 		<?php } ?>
 		</tbody>

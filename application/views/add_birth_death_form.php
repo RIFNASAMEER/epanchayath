@@ -18,10 +18,10 @@
   <div class="bs-example">
     <div class="panel panel-primary">
     <div class="panel-heading">
-        <h3 class="panel-title">Death/Birth Certificat</h3>
+        <h3 class="panel-title">Death/Birth Certificate</h3>
     </div>
     <div class="panel-body">
-    <?php echo form_open(base_url('Complaint_Controller/add'),["class"=>"form-horizontal"]); ?>
+    <?php echo form_open(base_url('Birth_Controller/add'),["class"=>"form-horizontal"]); ?>
     	<div class="form-group">
     		  		<label for="type"  class="col-sm-4 control-label">Select Type Of Form :</label>
     		  		<label class="radio-inline control-labe ">
@@ -110,15 +110,15 @@
     				<label for="Date Of Death/Birth" class="control-label col-xs-4">Date Of Death/Birth :</label>
     				<div class="col-xs-8"><input type="text" name="date" class="form-control"></input><br></div>
     			</div>
-		<div class="form-group">
-			<label for="Purpose Of The Certificate" class="control-label col-xs-4">Purpose Of The Certificate:</label>
-			<div class="col-xs-8">
-				<input type="text" name="purpose" class="form-control"><br>
-			</div>
+		        <div class="form-group">
+			    <label for="Purpose Of The Certificate" class="control-label col-xs-4">Purpose Of The Certificate:</label>
+			    <div class="col-xs-8"><input type="text" name="purpose" class="form-control"><br>
+            </div>
 		</div>
 		<div class="form-group">
 	        <label for="Name Of Registrar Office" class="control-label col-xs-4">Name Of Registrar Office:</label>
-	        <div class="col-xs-8"><input type="text" name="registrar"class="form-control"></input><br></div>
+            <div class="col-xs-8"><input type="text" name="registrar_office" class="form-control"><br>
+            </div>
         </div>
         <div class="form-group">
 	        <label for="Registration Number" class="control-label col-xs-4">Registration Number:</label>
