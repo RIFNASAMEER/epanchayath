@@ -25,6 +25,9 @@
 	<div><input type="text" name="name" id="name"></div></label><br>			
 	<label for="address">Address
 	<div><input type="textarea" name="address" id="address"></div></label><br>
+	<label for="address">Email
+	<div><input type="text" name="email" id="email"></div></label><br>
+
 	<label for="name of development/construction">Name of development/construction
 	<div><select name="select one">
 		<option value="Division of plot">Division of plot</option>
