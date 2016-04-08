@@ -23,7 +23,7 @@ class Marriage_Controller extends CI_Controller
 		$this->form_validation->set_rules('hus_name', 'husband name','required');
 		$this->form_validation->set_rules('address', 'address','required');
 		$this->form_validation->set_rules('dob', 'dob','required');
-		$this->form_validation->set_rules('email', 'email','required');
+		$this->form_validation->set_rules('emailid', 'email','required');
 		$this->form_validation->set_rules('citizen', 'citizen','required');
         $this->form_validation->set_rules('job', 'job','required');
 		$this->form_validation->set_rules('h_first_married_or_not', 'first married or not','required');
@@ -53,6 +53,7 @@ class Marriage_Controller extends CI_Controller
 		$this->form_validation->set_rules('v2_address', 'vitness address','required');
          if($this->form_validation->run()===FALSE)
            {
+           	    var_dump(validation_errors());
          		$this->load->view('add_marriage');
            }
          else
@@ -62,7 +63,7 @@ class Marriage_Controller extends CI_Controller
          	$hus_name = $this->input->post('hus_name');
             $address = $this->input->post('address');
             $dob = $this->input->post('dob');
-            $email = $this->input->post('email');
+            $emailid = $this->input->post('emailid');
          	$citizen= $this->input->post('citizen');
          	$job= $this->input->post('job');
          	$h_first_married_or_not= $this->input->post('h_first_married_or_not');
@@ -77,7 +78,7 @@ class Marriage_Controller extends CI_Controller
 			$v1_address= $this->input->post('v1_address');
 			$w_name= $this->input->post('w_name');
 			$w_address=$this->input->post('w_address');
-			$w_dob= $this->input->post('w_dob');
+			$w_dob = $this->input->post('w_dob');
 			$w_citizen= $this->input->post('w_citizen');
 			$w_job= $this->input->post('w_job');
 			$w_first_married_or_not= $this->input->post('w_first_married_or_not');
@@ -93,7 +94,7 @@ class Marriage_Controller extends CI_Controller
 			$data = [
 			    'address'=> $address,
 			    'dob'=>$dob,
-				'email'=>$email
+				'emailid'=>$emailid,
 				
 			];
 			$address = $this->Address_Model->add($data);
@@ -136,16 +137,18 @@ class Marriage_Controller extends CI_Controller
 			 }
 			if($this->Marriage_Model->add($data) != FALSE)
 				{
+			
 				redirect(base_url('Marriage_Controller/view'));
 				}
 				else
-		            redierect(base_url('Marriage_Controller/add'));
+		            redirect(base_url('Marriage_Controller/add'));
 	    }
 	}
 	public function view()
         {
         	$data['result'] = $this->Marriage_Model->view_all();
 			$data['address'] = $this->Address_Model->view();
+			//var_dump($data);
 			$this->load->view('admin/view_marriage',$data);
         }
         public function delete($id)

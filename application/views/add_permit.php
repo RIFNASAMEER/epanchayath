@@ -25,18 +25,18 @@
 	<div><input type="text" name="name" id="name"></div></label><br>			
 	<label for="address">Address
 	<div><input type="textarea" name="address" id="address"></div></label><br>
-<<<<<<< HEAD
+
 	<label for="email">email
 	<div><input type="text" name="email" id="email"></div></label><br>
 	<label for="name of development/construction">Nature of development/construction
 	<div><select name="select one" id="name_development">
-=======
+
 	<label for="address">Email
 	<div><input type="text" name="email" id="email"></div></label><br>
 
 	<label for="name of development/construction">Name of development/construction
 	<div><select name="select one">
->>>>>>> 6ab8ef5b99c485a3ba9581efee03c1eb88eced31
+
 		<option value="Division of plot">Division of plot</option>
 		<option value="New construction">New construction</option>
 		<option value="Reconstruction">Reconstruction</option>

@@ -37,7 +37,7 @@ class Marriage_Model extends CI_Model
 
 	{
 		$this->db->where('address_id',$id);
-		return	$this->db->delete('marriage_ certificate');
+		return	$this->db->delete('marriage_certificate');
 	}
 }
 ?>

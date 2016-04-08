@@ -14,7 +14,7 @@
  			<th>relationship</th>
  			<th>place</th>
  			<th>mobileno</th>
- 			<th>email</th>
+ 			<th>emailid</th>
  			<th>house_no</th>
  			<th>ward_no</th>
  			<th>village</th>
@@ -24,7 +24,7 @@
  			<th>father/mother</th>
  			<th>date</th>
  			<th>purpose</th>
- 			<th>registrar</th>
+ 			<th>registrar_office</th>
  			<th>registration_no</th>
  			<th>localbodytype</th>
  			<th>localbody</th>
@@ -40,7 +40,7 @@
 		 foreach ($result as $value){ ?>
 				<tr>
 					<td><?php echo $value->id; ?></td>
-					<td><?php echo $value->appliant_name; ?></td>
+					<td><?php echo $value->applicant_name; ?></td>
 					<td><?php echo $value->relationship; ?></td>
 					<td><?php echo $value->house_no; ?></td>
 					<td><?php echo $value->ward_no; ?></td>
@@ -66,7 +66,7 @@
 					<td><?php echo $values->address ?></td>
 					<td><?php echo $values->place; ?></td>
 					<td><?php echo $values->mobileno; ?></td>
-					<td><?php echo $values->email; ?></td>
+					<td><?php echo $values->emailid; ?></td>
 					<td><a href="<?php echo base_url('Birth_Controller/delete').'/'.$value->address_id;?>">delete</a></td>
 					<?php }}}}?>
 				</tr>			

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>View Marriage Registration Form</title>
+	<title>Marriege Registration Table</title>
 </head>
 <body>
   <table border="1px">
- 	<caption>Marriage Registration table</caption>
+ 	<caption>Marriage Registration Table</caption>
  	<thead>
  		<tr>
  			<th>Id</th>
@@ -14,7 +14,7 @@
  			<th>hus_name</th>
  			<th>address</th>
  			<th>dob</th>
- 			<th>email</th>
+ 			<th>emailid</th>
  			<th>citizen</th>
  			<th>job</th>
  			<th>h_first_married_or_not</th>
@@ -90,7 +90,7 @@
 					?>
 					<td><?php echo $values->address; ?></td>
 					<td><?php echo $values->dob;?></td> 
-					<td><?php echo $values->email; ?></td>
+					<td><?php echo $values->emailid; ?></td>
 					<td><a href="<?php echo base_url('marriage_Controller/delete').'/'.$value->address_id;?>">delete</a></td>
 					<?php }}}}?>
  	</tr>

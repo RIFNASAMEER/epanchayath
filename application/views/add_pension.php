@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>view pension</title>
+	<title>Add pension</title>
 	<link rel="stylesheet" href="">
 	<link rel="stylesheet" href="<?php echo base_url('bootstrap/css/bootstrap.min.css') ?>">
 	<link rel="stylesheet" href="<?php echo base_url('bootstrap/css/bootstrap-theme.min.css') ?>">
@@ -17,13 +17,13 @@
       padding: 18px 18px;
     }
   </style>
-  <!--  <form name="complaints"  method="post" action="<?php //echo base_url(''Complaint_Controller/add''); ?>"> -->
+  
   <div class="bs-example">
  <div class="panel panel-primary">
     <div class="panel-heading">
-        <h3 class="panel-title">Pention</h3>
+        <h3 class="panel-title">Pension</h3>
     </div><div class="panel-body">
-  <?php echo form_open(base_url(''),["class"=>"form-horizontal"]); ?>
+  <?php echo form_open(base_url('Pension_Controller/add'),["class"=>"form-horizontal"]); ?>
     <div class="form-group">
 		<label for="" class="control-label col-xs-4">Name</label>
 		<div class="col-xs-8">
@@ -31,20 +31,32 @@
 		</div>
 	</div>
 	<div class="form-group">
-		<label for="" class="control-label col-xs-4">Address</label>
+		<label for="" class="control-label col-xs-4">House Number :</label>
 		<div class="col-xs-8">
-			<input type="text" name="name" id="name"><br>
+			<input type="text" name="houseno" id="houseno"><br>
 		</div>
 	</div>
 	<div class="form-group">
-		<label for="" class="control-label col-xs-4">Age</label>
+		<label for="" class="control-label col-xs-4">Landmark :</label>
 		<div class="col-xs-8">
-			<input type="text" name="name" id="name"><br>
+			<input type="text" name="landmark" id="landmark"><br>
 		</div>
 	</div>
 	<div class="form-group">
-    	<label for="Date Of Death/Birth" class="control-label col-xs-4">Date Of Death/Birth :</label>
-    	<div class="col-xs-8"><input type="text" name="date" class="form-control"></input><br></div>
+    	<label for="nameofstreet" class="control-label col-xs-4">Name Of Street :</label>
+    	<div class="col-xs-8"><input type="nameofstreet" name="nameofstreet" class="form-control"></input><br></div>
+    	</div>
+    <div class="form-group">
+    	<label for="" class="control-label col-xs-4">Major Place :</label>
+    	<div class="col-xs-8"><input type="majorplace" name="majorplace" class="form-control"></input><br></div>
+    	</div>
+    <div class="form-group">
+    	<label for="" class="control-label col-xs-4">Post Office :</label>
+    	<div class="col-xs-8"><input type="postoffice" name="postoffice" class="form-control"></input><br></div>
+    	</div>
+    <div class="form-group">
+    	<label for="" class="control-label col-xs-4">Pincode :</label>
+    	<div class="col-xs-8"><input type="pincode" name="pincode" class="form-control"></input><br></div>
     	</div>
 	<div class="form-group">
 		<label for="" class="control-label col-xs-4">Gender:</label>
@@ -55,129 +67,82 @@
 	
 	</div>
 	<div class="form-group">
-		<label for="" class="control-label col-xs-4">House no:</label>
+		<label for="" class="control-label col-xs-4">Disease:</label>
 		<div class="col-xs-8">
-			<input type="text" name="house" id="house"><br/>
+			<input type="text" name="disease" id="disease"><br/>
 		</div>
 	</div>
 	<div class="form-group">
-		<label for="" class="control-label col-xs-4">Landmark:</label>
+		<label for="" class="control-label col-xs-4">Number Of Years In Kerela:</label>
 		<div class="col-xs-8">
-			<input type="text" name="landmark" id="landmark"><br/>
+			<input type="text" name="no_ofyears_inkerala" id="no_ofyears_inkerala"><br/>
 		</div>
 	</div>
 	<div class="form-group">
-		<label for="" class="control-label col-xs-4">Name of street:
+		<label for="" class="control-label col-xs-4">Ration Card Number:
 		</label>
 		<div class="col-xs-8">
-			<input type="text" name="street" id="street"><br/>
+			<input type="text" name="rationcardno" id="rationcardno"><br/>
 		</div>
 	</div>
 	<div class="form-group">
-		<label for="" class="control-label col-xs-4">Major place:</label>
+		<label for="" class="control-label col-xs-4">BPL Card Number:</label>
 		<div class="col-xs-8">
-			<input type="text" name="major" id="major"><br/>
+			<input type="text" name="bplcardno" id="bplcardno"><br/>
 		</div>
 	</div>
 	<div class="form-group">
-		<label for="" class="control-label col-xs-4">Post office:</label>
+		<label for="" class="control-label col-xs-4">ID Card Number:</label>
 		<div class="col-xs-8">
-			<input type="text" name="post" id="post"><br/>
+			<input type="text" name="idcardno" id="idcardno"><br/>
 		</div>
 	</div>
 	<div class="form-group">
-		<label for="" class="control-label col-xs-4">Pin code:</label>
+		<label for="" class="control-label col-xs-4">Name Of Ward Councilor(ward member):</label>
 		<div class="col-xs-8">
-			<input type="text" name="pincode" id="pincode"><br/>
-		</div>
-	</div>
-	 <div class="form-group">
-	        <label for="Localbody type" class="control-label col-xs-4"> Category</label>
-	        <div class="col-xs-8">
-	           <select name="Localbodytype" class = "form-control">
-	               <option value="Genaral">Genaral</option>
-	               <option value="Sc/St">Sc/St</option>
-	               <option value="OBC">OBC</option>
-	            </select><br>
-	        </div>
-        </div> 
-	<div class="form-group">
-		<label for="" class="control-label col-xs-4">No of years,living in kerala:</label>
-		<div class="col-xs-8">
-			<input type="text" name="years" id="years"><br/>
+			<input type="text" name="wardcouncilor" id="wardcouncilor"><br/>
 		</div>
 	</div>
 	<div class="form-group">
-		<label for="" class="control-label col-xs-4">Ration card no:</label>
+		<label for="" class="control-label col-xs-4">Indegently :</label>
 		<div class="col-xs-8">
-			<input type="text" name="rationcard" id="rationcard"><br/>
+			<input type="text" name="intigently" id="intigently"><br/>
 		</div>
 	</div>
 	<div class="form-group">
-		<label for="" class="control-label col-xs-4">Bpl card no:</label>
+		<label for="" class="control-label col-xs-4">Begger :</label>
 		<div class="col-xs-8">
-			<input type="text" name="bpl" id="bpl"><br/>
+			<input type="text" name="begger" id="begger"><br/>
 		</div>
 	</div>
 	<div class="form-group">
-		<label for="" class="control-label col-xs-4">Id card no:</label>
+		<label for="" class="control-label col-xs-4">Martial Status :</label>
 		<div class="col-xs-8">
-			<input type="text" name="idcard" id="idcard"><br/>
+			<input type="text" name="marcialstatus" id="marcialstatus"><br/>
 		</div>
 	</div>
 	<div class="form-group">
-		<label for="" class="control-label col-xs-4">Ward member:</label>
+		<label for="" class="control-label col-xs-4">Husband/Wife:</label>
 		<div class="col-xs-8">
-			<input type="text" name="councilor" id="councilor"><br/>
+			<input type="text" name="husbend_wife" id="husbend_wife"><br/>
 		</div>
 	</div>
 	<div class="form-group">
-		<label for="" class="control-label col-xs-4">Name of Guardian:</label>
+		<label for="" class="control-label col-xs-4">Annual Income:</label>
 		<div class="col-xs-8">
-			<input type="text" name="idcard" id="idcard"><br/>
+			<input type="text" name="annualincome" id="annualincome"><br/>
 		</div>
 	</div>
 	<div class="form-group">
-		<label for="" class="control-label col-xs-4">Job of Guardian:</label>
+		<label for="" class="control-label col-xs-4">Contact(Email/mobile):</label>
 		<div class="col-xs-8">
-			<input type="text" name="idcard" id="idcard"><br/>
+			<input type="text" name="contact" id="contact"><br/>
 		</div>
 	</div>
 	<div class="form-group">
-		<label for="" class="control-label col-xs-4">Whether orphan</label>
-		<div class="col-xs-8">
-			<input type="radio" name="gender" value="m">yes</div>
-		<div class="col-xs-8">
-			<input type="radio" name="gender" value="f">no</input><br/></div>
-	
-	</div>
-	<div class="form-group">
-		<label for="" class="control-label col-xs-4">Whether reciving any other pension</label>
-		<div class="col-xs-8">
-			<input type="radio" name="gender" value="m">yes</div>
-		<div class="col-xs-8">
-			<input type="radio" name="gender" value="f">no</input><br/></div>
-	
-	</div>
-	<div class="form-group">
-		<label for="" class="control-label col-xs-4">Annual income:</label>
-		<div class="col-xs-8">
-			<input type="text" name="income" id="income"><br/>
-		</div>
-	</div>
-	<div class="form-group">
-		<label for="" class="control-label col-xs-4">Phone no/contact no:</label>
-		<div class="col-xs-8">
-			<input type="text" name="contact" id="contact"><br/></div>
-	</div>
-	<div class="form-group">
-		<div class="col-xs-offset-2 col-xs-8">
+		 <div class="col-xs-offset-2 col-xs-8">
 			<button type="submit"class="btn btn-primary">Submit</button>
-			<button type="submit" class="btn btn-primary">Reset </button>
-		</div>
-  </div>
-
-
+		</div></div>
 
 </form></div></div></div>
 </body>

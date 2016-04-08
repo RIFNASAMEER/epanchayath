@@ -37,7 +37,7 @@ class Birth_Model extends CI_Model
 
 	{
 		$this->db->where('address_id',$id);
-		return	$this->db->delete('birth_ certificate');
+		return	$this->db->delete('birth_certificate');
 	}
 }
 ?>
