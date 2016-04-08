@@ -63,13 +63,13 @@
     			<div class="form-group">
     				<label for="email" class="control-label col-xs-4"> E-mail :</label>
     			    <div class="col-xs-8">
-    			    	<input type="text" name="email" class="form-control"><br>
+    			    	<input type="text" name="emailid" class="form-control"><br>
     			    </div>
     			</div>
     			<div class="form-group">
     				<label for="requester name" class="control-label col-xs-4">FullNameOfThe Requester:</label>
     				<div class="col-xs-8">
-    					<input type="text" name="appliant_name" class="form-control"><br>
+    					<input type="text" name="applicant_name" class="form-control"><br>
     				</div>
     			</div>
     			<div class="form-group">
@@ -83,7 +83,7 @@
     			</div>
     			<div class="form-group">
     				<label for="village" class="control-label col-xs-4">Village: </label>
-    				<div class="col-xs-8"><input type="text" name="house_no" class="form-control"></input><br></div> 
+    				<div class="col-xs-8"><input type="text" name="village" class="form-control"></input><br></div> 
     	
     			</div>			
     			<div class="form-group">
@@ -125,9 +125,9 @@
 	        <div class="col-xs-8"><input type="text" name="registration_no" class="form-control"><br></div>
         </div>
         <div class="form-group">
-	        <label for="Localbody type" class="control-label col-xs-4"> Localbody Type:</label>
+	        <label for="localbodytype" class="control-label col-xs-4"> Localbody Type:</label>
 	        <div class="col-xs-8">
-	           <select name="Localbodytype" class = "form-control">
+	           <select name="localbodytype" class = "form-control">
 	               <option value="Panchayath">Panchayath</option>
 	               <option value="Municipality">Municipality</option>
 	               <option value="Corporation">Corporation</option>
@@ -141,13 +141,13 @@
          <div class="form-group">
 	        <label for="gender" class="control-label col-xs-4"> Gender: </label>
     		<label class="radio-inline control-labe ">
-    		<input type="radio" name="optradio">Male</label>
+    		<input type="radio" name="gender">Male</label>
     	    <label class="radio-inline control-label">
-    	     <input type="radio" name="optradio">Female</label>
+    	     <input type="radio" name="gender">Female</label>
 		</div>
 		 <div class="form-group">
 			<label for="Address" class="control-label col-xs-4"> Address :</label>
-			<div class="col-xs-8"><textarea name="baddress" class="form-control"></textarea><br></div>
+			<div class="col-xs-8"><textarea name="day_address" class="form-control"></textarea><br></div>
 		</div>
 		<div class="form-group">
 		 <div class="col-xs-offset-2 col-xs-8">

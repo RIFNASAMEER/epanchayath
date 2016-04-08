@@ -25,7 +25,7 @@ class Birth_Controller extends CI_Controller
 		$this->form_validation->set_rules('relationship', 'relationship','required');
 		$this->form_validation->set_rules('place', 'place','required');
 		$this->form_validation->set_rules('mobileno', 'mobileno','required');
-		$this->form_validation->set_rules('email', 'email','required');
+		$this->form_validation->set_rules('emailid', 'email','required');
 		$this->form_validation->set_rules('house_no', 'House Number','required');
         $this->form_validation->set_rules('ward_no', 'Ward Number','required');
 		$this->form_validation->set_rules('village', 'Village','required');
@@ -36,7 +36,7 @@ class Birth_Controller extends CI_Controller
 		$this->form_validation->set_rules('father_mother', 'Father_Mother','required');
 		$this->form_validation->set_rules('date', 'Date','required');
 		$this->form_validation->set_rules('purpose', 'Purpose','required');
-		$this->form_validation->set_rules('registar_office', 'registar_office','required');
+		$this->form_validation->set_rules('registrar_office', 'registrar_office','required');
 		$this->form_validation->set_rules('registration_no', 'registration_no','required');
 		$this->form_validation->set_rules('localbodytype', 'localbodytype','required');
 		$this->form_validation->set_rules('localbody', 'localbody','required');
@@ -44,6 +44,7 @@ class Birth_Controller extends CI_Controller
 		$this->form_validation->set_rules('day_address', 'day_address','required');
          if($this->form_validation->run()===FALSE)
            {
+           	    var_dump(validation_errors());
          		$this->load->view('add_birth_death_form');
            }
          else
@@ -53,7 +54,7 @@ class Birth_Controller extends CI_Controller
          	$relationship = $this->input->post('relationship');
          	$place= $this->input->post('place');
          	$mobileno= $this->input->post('mobileno');
-         	$email= $this->input->post('email');
+         	$emailid= $this->input->post('emailid');
 			$house_no= $this->input->post('house_no');
 			$ward_no=$this->input->post('ward_no');
 			$village = $this->input->post('village');
@@ -61,10 +62,10 @@ class Birth_Controller extends CI_Controller
 			$pincode = $this->input->post('pincode');
 			$district= $this->input->post('district');
 			$name= $this->input->post('name');
-			$father_mother= $this->input->post('father/mother');
+			$father_mother= $this->input->post('father_mother');
 			$date= $this->input->post('date');
 			$purpose= $this->input->post('purpose');
-			$registrar=$this->input->post('registrar_office');
+			$registrar_office=$this->input->post('registrar_office');
 			$registration_no= $this->input->post('registration_no');
 			$localbodytype= $this->input->post('localbodytype');
 			$localbody= $this->input->post('localbody');
@@ -74,7 +75,7 @@ class Birth_Controller extends CI_Controller
 			    'address'=> $address,
 			    'place'=>$place,
 			    'mobileno' => $mobileno,
-				'email'=>$email
+				'emailid'=>$emailid,
 				
 			];
 			$address = $this->Address_Model->add($data);
@@ -94,7 +95,7 @@ class Birth_Controller extends CI_Controller
 				'father_mother' =>$father_mother,
 				'date' => $date,
 				'purpose' => $purpose,
-				'registrar_office' =>$registar_office,
+				'registrar_office' =>$registrar_office,
 				'registration_no' => $registration_no,
 				'localbodytype' => $localbodytype,
 				'localbody' => $localbody,

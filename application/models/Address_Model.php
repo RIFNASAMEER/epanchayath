@@ -30,7 +30,7 @@ class Address_Model extends CI_Model
 	}
 	public function view()
 	{
-		$field = ['id','gender','address','dob','place','mobileno'];
+		$field = ['id','gender','address','dob','place','mobileno','emailid'];
 		$this->db->select($field);
 		$query = $this->db->get('address');
 		if($query->num_rows() > 0 )

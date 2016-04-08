@@ -73,7 +73,7 @@ class Permit_Controller extends CI_Controller
 			$plinth_area=$this->input->post('plinth_area');
 			$basement_floor=$this->input->post('basement_floor');
 			$ground_floor=$this->input->post('ground_floor');
-			$first_floor=$this->input->post('first_floor');
+			$first_floor=$this->input->post('fir9st_floor');
 			$second_floor=$this->input->post('second_floor');
 			$total_area=$this->input->post('total_area');
 			$height=$this->input->post('height');
