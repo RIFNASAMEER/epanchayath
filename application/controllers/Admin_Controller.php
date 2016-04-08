@@ -19,6 +19,10 @@ class Admin_Controller extends Check_Logged
 		$this->load->model('Complaint_Model');
 
 	}
+	public function index()
+	{
+		$this->load->view('admin/add_authority');
+	}
 
 
 	public function generate()
@@ -74,6 +78,7 @@ class Admin_Controller extends Check_Logged
 			}
         }
     }
+}
     public function logout()
     {
 		$this->session->set_userdata('logged_in',FALSE);
