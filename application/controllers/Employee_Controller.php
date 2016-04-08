@@ -10,7 +10,7 @@ class Employee_Controller extends CI_Controller
 	{
 		parent::__construct();
 
-		$this->load->helper(['url','form']);
+		$this->load->helper(['url','form','menu']);
 		$this->load->library(['form_validation']);
 
 
@@ -20,8 +20,12 @@ class Employee_Controller extends CI_Controller
 
 
 	}
+	public function index()
+	{
+		$this->load->view('admin/add_employee');
+	}
 	
- public function add()
+ 	public function add()
 	{
 		$this->form_validation->set_rules('name', 'Name','required');
 		$this->form_validation->set_rules('gender', 'Gender','required');
@@ -30,6 +34,7 @@ class Employee_Controller extends CI_Controller
 		$this->form_validation->set_rules('place', 'Place','required');
         $this->form_validation->set_rules('mobileno', 'Mobile no','required');
 		if ($this->form_validation->run() === FALSE) {
+
 			$this->load->view('admin/add_employee');
 		}
 		else
@@ -56,15 +61,20 @@ class Employee_Controller extends CI_Controller
 					'designation' => $designation, 
 					'address_id' => $address_id
 				];
-				if($this->Employee_Model->add($data) != FALSE)
+				$result = $this->Employee_Model->add($data);
+				if ($result) 
 				{
-					var_dump('success');
+					$data['message'] = '<script type="text/javascript">
+	                                    var r = alert("successful!");
+	                                    if (r == true) {
+	                                        window.location = "' . base_url('dashboard/employee') . '";
+	                                    } else {
+	                                        window.location = "' . base_url('dashboard/employee') . '";
+	                                    }
+	                                </script>';
+	                $this->load->view('admin/add_employee',$data);                
 				}
-				else
-					var_dump('failed');
 			}
-			else
-				var_dump('failed');
 		}
 
 
@@ -75,8 +85,71 @@ class Employee_Controller extends CI_Controller
 	public function view()
 	{
 
-		$data['result'] = $this->Employee_Model->view_all();
+		/*$data['result'] = $this->Employee_Model->view_all();
 		$data['address'] = $this->Address_Model->view();
+		$this->load->view('admin/view_employees',$data);*/
+		$data =$this->Employee_Model->view_all();
+		$datas = $this->Address_Model->view();
+		$this->load->library('table');
+	 	$this->table->set_heading('Name','designation ','DOB','Gender','Address','Place','mobile no','Remove',anchor(base_url('dashboard/authority/add'),'add',['class' => 'button normal-button']));
+	 		
+	 		/*$result = array_merge($data, $datas);
+	 		var_dump($result);*/
+	 		if(!empty($data))
+	 		{
+		 		foreach ($data as $key => $value)
+		 		{
+		 			foreach ($datas as $key => $values)
+		 			{
+		 				if($values->id == $value->id )
+				 			$this->table->add_row
+				 								(
+								 					$value->name,
+								 					$value->designation,
+								 					$values->dob,
+													$values->gender,
+													$values->address ,
+													$values->place,
+													$values->mobileno,
+									 				'<a href="'. base_url('dashboard/employee/delete/'.$value->id).'">delete<i class="fa fa-trash-o"></i></a>'
+				 		
+				 								);
+				 		}						
+				 	
+				 								
+		 		}
+				$template = [
+	          'table_open'            => '<table id="testimonial" class = "table">',
+	          'thead_open'            => '<thead class="header">',
+	          'thead_close'           => '</thead>',
+
+	          'heading_row_start'     => '<tr>',
+	          'heading_row_end'       => '</tr>',
+	          'heading_cell_start'    => '<th>',
+	          'heading_cell_end'      => '</th>',
+
+	          'tbody_open'            => '<tbody>',
+	          'tbody_close'           => '</tbody>',
+
+	          'row_start'             => '<tr>',
+	          'row_end'               => '</tr>',
+	          'cell_start'            => '<td>',
+	          'cell_end'              => '</td>',
+
+	          'row_alt_start'         => '<tr>',
+	          'row_alt_end'           => '</tr>',
+	          'cell_alt_start'        => '<td>',
+	          'cell_alt_end'          => '</td>',
+
+	          'table_close'           => '</table>'
+	        ];
+      	$this->table->set_template($template);	 		
+		$data['data'] = $this->table->generate();
+ 		
+ 		} else {
+            $data['message'] = 'No data Found
+                                    <a href="'.base_url('dashboard/employee/add').'">add</a>';
+        }
 		$this->load->view('admin/view_employees',$data);
 	}
 	public function edit_data($id)
