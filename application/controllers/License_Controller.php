@@ -21,8 +21,8 @@ class License_Controller extends CI_Controller
      {
      	$this->form_validation->set_rules('name', 'Name', 'required');
      	$this->form_validation->set_rules('address', 'Address', 'required');
-     	$this->form_validation->set_rules('mobileno', 'Mobno', 'required');
-     	$this->form_validation->set_rules('email', 'email', 'required');
+     	$this->form_validation->set_rules('mobileno', 'Mobileno', 'required');
+     	$this->form_validation->set_rules('emailid', 'email', 'required');
      	$this->form_validation->set_rules('purpose_of_license', 'Purpose', 'required');
      	$this->form_validation->set_rules('name_and_address_of_building', 'building', 'required');
      	$this->form_validation->set_rules('village', 'Village', 'required');
@@ -32,25 +32,26 @@ class License_Controller extends CI_Controller
      	$this->form_validation->set_rules('year_of_license_needed', 'Year', 'required');
      	$this->form_validation->set_rules('type_of_roof', 'Type', 'required');
      	$this->form_validation->set_rules('if_the_license_for_renewel', 'Renewel', 'required');
-     	$this->form_validation->set_rules('nearest_place', 'Nearest', 'required');
-     	$this->form_validation->set_rules('name_of_nearest_building', 'nearest', 'required');
+     	$this->form_validation->set_rules('nearest_place', 'Nearest place', 'required');
+     	$this->form_validation->set_rules('if_the_license_for_renewel', 'nearest building', 'required');
      	$this->form_validation->set_rules('power', 'Power', 'required');
      	$this->form_validation->set_rules('boundaries', 'Boundaries', 'required');
      	$this->form_validation->set_rules('total_area_of_plant', 'Total', 'required');
-     	$this->form_validation->set_rules('number_of_workers', 'Workers', 'required');
+     	$this->form_validation->set_rules('no_of_workers', 'Workers', 'required');
      	$this->form_validation->set_rules('reciept_no', 'Reciept', 'required');
      	$this->form_validation->set_rules('paid_amount', 'Paid', 'required');
      	$this->form_validation->set_rules('total_yield', 'yield', 'required');
 
 		if($this->form_validation->run() === FALSE)
 		{
+			var_dump(validation_errors());
 			$this->load->view('add_license');
 		}
 		else{
 				$name= $this->input->post('name');
 			$address=$this->input->post('address');
-			$mobno=$this->input->post('mobileno');
-			$email=$this->input->post('email');
+			$mobileno=$this->input->post('mobileno');
+			$emailid=$this->input->post('emailid');
 			$purpose_of_license=$this->input->post('purpose_of_license');
 			$name_and_address_of_building=$this->input->post('name_and_address_of_building');
 			$village=$this->input->post('village');
@@ -61,18 +62,18 @@ class License_Controller extends CI_Controller
 			$type_of_roof=$this->input->post('type_of_roof');
 			$if_the_license_for_renewel=$this->input->post('if_the_license_for_renewel');
 			$nearest_place=$this->input->post('nearest_place');
-			$name_of_the_building=$this->input->post('name_of_nearest_building');
+			$name_of_nearest_building=$this->input->post('name_of_nearest_building');
 			$power=$this->input->post('power');
 			$boundaries=$this->input->post('boundaries');
 			$total_area_of_plant=$this->input->post('total_area_of_plant');
-			$number_of_workers=$this->input->post('number_of_workers');
+			$no_of_workers =$this->input->post('no_of_workers');
 			$reciept_no=$this->input->post('reciept_no');
 			$paid_amount=$this->input->post('paid_amount');
 			$total_yield=$this->input->post('total_yield');
 			$data = [
 			'address'=> $address,
 			'mobileno'=>$mobileno,
-			'email'=>$email
+			'emailid'=>$emailid,
 
 			];
 			$address = $this->Address_Model->add($data);
@@ -93,19 +94,19 @@ class License_Controller extends CI_Controller
 				'power'=>$power,
 				'boundaries'=>$boundaries,
 				'total_area_of_plant'=>$total_area_of_plant,
-				'number_of_workers'=>$number_of_workers,
+				'no_of_workers'=>$no_of_workers,
 				'reciept_no'=>$reciept_no,
 				'paid_amount'=>$paid_amount,
 				'total_yield'=>$total_yield,
 				'address_id'=>$address,
 				];
 			}
-			if($this->License_Model->add($data) !=FALSE)
+			if($this->License_Model->add_license($data) != FALSE)
 			{
 				redirect(base_url('License_Controller/view'));
 			}
 			else
-				var_dump('failed');
+				redirect(base_url('License_Controller/add_license'));
 		}
 	}
 	public function view()

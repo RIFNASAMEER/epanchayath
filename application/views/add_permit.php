@@ -18,27 +18,19 @@
     <div class="panel-heading">
         <h3 class="panel-title">Complaint Registration</h3>
     </div><div class="panel-body">
-  <?php echo form_open(base_url('Permit_Controller/add'),["class"=>"form-horizontal", 'name'='permit',  'method'='post']); ?>
+  <?php echo form_open(base_url('Permit_Controller/add_permit'),["class"=>"form-horizontal"]); ?>
 <div class="form-group">
 <body>
 	<label for="name">Name
 	<div><input type="text" name="name" id="name"></div></label><br>			
 	<label for="address">Address
 	<div><input type="textarea" name="address" id="address"></div></label><br>
-
-	<label for="email">email
-	<div><input type="text" name="email" id="email"></div></label><br>
-	<label for="name of development/construction">Nature of development/construction
-	<div><select name="select one" id="name_development">
-
-	<label for="address">Email
-	<div><input type="text" name="email" id="email"></div></label><br>
-
+    <label for="email">email
+	<div><input type="text" name="emailid" id="emailid"></div></label><br>
 	<label for="name of development/construction">Name of development/construction
-	<div><select name="select one">
-
-		<option value="Division of plot">Division of plot</option>
-		<option value="New construction">New construction</option>
+	<div><select name="name_development">
+       <option value="Division of plot">Division of plot</option>
+	   <option value="New construction">New construction</option>
 		<option value="Reconstruction">Reconstruction</option>
 		<option value="Alteration<">Alteration</option>
 		<option value="Addition/Extension">Addition/Extension</option>
@@ -60,10 +52,10 @@
 		<label for="taluk">Taluk:<div><input type="text" name="taluk" id="taluk"></div></label><br/>
 		<label for="district">District:<div><input type="text" name="district" id="district"></div></label><br/>
 	    <label for="Occupancy">Occupancy :<label/><div><input type="checkbox" name="occupancy" id="occupancy" value="residential_group_a1">Residential Group A1
-		<input type="checkbox" name="occupancy" id="occupancy" value="non_residential">NOn Residential<br/>
+		<input type="checkbox" name="occupancy" id="occupancy" value="non_residential">Non Residential<br/>
 
 		Whether Government or Quasi Government:<div><input type="checkbox" name="govt_quasi" id="govt_quasi" value="government">government
-		<input type="checkbox" name="govt_quasi" id="govt_quasi" value="no">NO<br/>
+		<input type="checkbox" name="govt_quasi" id="govt_quasi" value="no">quasi government<br/>
 		<label for="area of the proposed building">area of the proposed building:<input type="text" name="plinth_area" id="plinth_area"></div></label><br/>
 		<label for="basement floor">basement floor:<div><input type="text" name="basement_floor" id="basement_floor"></div></label><br/>
 		<label for="ground floor">ground floor:<div><input type="text" name="ground_floor" id="ground_floor"></div></label><br/>
@@ -71,9 +63,8 @@
 		<label for="second floor">second floor:<div><input type="text" name="second_floor" id="second_floor"></div></label><br/>
 		<label for="Total area">Total area:<div><input type="text" name="total_area" id="total_area"></div></label><br/>
 		<label for="Maximum height of building in metres">Maximum height of building in metres:<div><input type="text" name="height" id="height"></div></label><br/>
-	<label for="if the application is regularisation">If the application is regularisation</label>
-		<label for="whether completed or not">whether completed or not:</label><div><input type="radio" name="whether_completed_or_not" id="whether_completed_or_not" value="completed">completed</div><br/>
-		<label for="whether completed or not">whether completed or not:</label><div><input type="radio" name="whether_completed_or_not" id="whether_completed_or_not" value="not">not</div><br/>
+	<label for="if the application is regularisation">If the application is regularisation</label><br>
+		<label for="whether completed or not">whether completed or not:</label><div><input type="radio" name="whether_completed_or_not" id="whether_completed_or_not" value="completed">completed<input type="radio" name="whether_completed_or_not" id="whether_completed_or_not" value="not completed">not completed</div><br/>
 		<label for="if_not_completed,the stage of construction">if not completed,the stage of construction:</label><div><input type="text" name="stage" id="stage"></div><br>
 		<label for="Name and address of the developer">Name and address of the developer:<div><textarea name="developer_details" id="developer_details"></textarea></div></label><br/>
 	<label for="details of fee paid">Details of fee paid</label>

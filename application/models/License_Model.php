@@ -12,7 +12,7 @@
  	 parent::__construct();
  	 $this->load->database();
  	}
- 	public function add($data)
+ 	public function add_license($data)
  	{
  		if ($this->db->insert('d_o_license',$data)===true)
  		{

@@ -130,6 +130,11 @@ function dashboard_menu($current)
             'icon' => 'fa-folder',
             'link' => 'complaint'
         ],
+       'permit' => [
+            'title' => 'permit',
+            'icon' => 'fa-folder',
+            'link' => 'permit'
+        ],
        
          
     ];

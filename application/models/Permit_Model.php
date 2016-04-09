@@ -12,7 +12,7 @@
  	 parent::__construct();
  	 $this->load->database();
  	}
- 	public function add($data)
+ 	public function add_permit($data)
  	{
  		if ($this->db->insert('permit',$data)===true)
  		{

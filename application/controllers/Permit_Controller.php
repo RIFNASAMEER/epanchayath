@@ -13,18 +13,19 @@ class Permit_Controller extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->library(['form_validation']);
-		$this->load->helper(['url','form']);
+		$this->load->helper(['url','form','menu']);
 		$this->load->model('Permit_Model');
+        $this->load->model('Address_Model');
 
 	}
 	public function add_permit()
 	{
 		$this->form_validation->set_rules('name', 'Name', 'required');
 		$this->form_validation->set_rules('address','Address','required');
-     	$this->form_validation->set_rules('email', 'email', 'required');
+     	$this->form_validation->set_rules('emailid', 'email', 'required');
      	$this->form_validation->set_rules('name_development', 'email', 'required');
 		$this->form_validation->set_rules('survey_no','survey','required');
-		$this->form_validation->set_rules('extend','Extend','required');
+		$this->form_validation->set_rules('extent','Extent','required');
 		$this->form_validation->set_rules('nature','Nature','required');
 		$this->form_validation->set_rules('date','Date','required');
 		$this->form_validation->set_rules('office','Office','required');
@@ -51,15 +52,16 @@ class Permit_Controller extends CI_Controller
 
 		if($this->form_validation->run() === FALSE)
 		{
+			var_dump(validation_errors());
 			$this->load->view('add_permit');
 		}
 		else{
 
 			$name= $this->input->post('name');
 			$address=$this->input->post('address');
-			$email= $this->input->post('email');
+			$emailid= $this->input->post('emailid');
 			$survey_no=$this->input->post('survey_no');
-			$extend=$this->input->post('extend');
+			$extent=$this->input->post('extent');
 			$nature=$this->input->post('nature');
 			$date=$this->input->post('date');
 			$office=$this->input->post('office');
@@ -85,7 +87,7 @@ class Permit_Controller extends CI_Controller
 			$document_details=$this->input->post('document_details');
 			$data = [
 			'address'=> $address,
-			'email'=>$email
+			'emailid'=>$emailid,
 
 			];
 			$address = $this->Address_Model->add($data);
@@ -95,7 +97,7 @@ class Permit_Controller extends CI_Controller
 				'name'=>$name,
 				'name_development'=>$name_development,
 				'survey_no'=>$survey_no,
-				'extend'=>$extend,
+				'extent'=>$extent,
 				'nature'=>$nature,
 				'date'=>$date,
 				'office'=>$office,
@@ -123,18 +125,18 @@ class Permit_Controller extends CI_Controller
               ];
 				
 			}
-			if($this->Permit_Model->add($data) !=FALSE)
+			if($this->Permit_Model->add_permit($data) !=FALSE)
 			{
 				redirect(base_url('Permit_Controller/view'));
 			}
 			else
-				var_dump('failed');
+				redirect(base_url('Permit_Controller/add_permit'));
 		}
 	}
 	public function view()
 	{
 		$data['result'] = $this->Permit_Model->view_all();
-		$data['address'] = $this->Address_Model->view();
+	    $data['address'] = $this->Address_Model->view();
 		$this->load->view('admin/view_permit',$data);
 	}
 	public function delete($id)
