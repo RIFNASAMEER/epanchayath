@@ -130,6 +130,11 @@ function dashboard_menu($current)
             'icon' => 'fa-folder',
             'link' => 'complaint'
         ],
+        'gallery' => [
+            'title' => 'gallery',
+            'icon' => 'fa-folder',
+            'link' => 'gallery'
+        ],
        
          
     ];

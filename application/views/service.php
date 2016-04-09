@@ -87,27 +87,12 @@
                             </li>
                             <li><a href="about">About</a></li>
                             <li><a href="service">Service</a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <span class="caret"></span></a>
-                                <div class="dropdown-menu">
-                                    <ul>
-                                        <li><a href="404.html">404 Page</a></li>
-                                        <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="gallery">Gallery</a></li>
+                            <li><a href="contact">Contact</a></li>
                                     </ul>
                                 </div>
                             </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <span class="caret"></span></a>
-                                <div class="dropdown-menu">
-                                    <ul>
-                                        <li><a href="blog-fullwidth.html">Blog Full</a></li>
-                                        <li><a href="blog-left-sidebar.html">Blog Left sidebar</a></li>
-                                        <li><a href="blog-right-sidebar.html">Blog Right sidebar</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li><a href="contact.html">Contact</a></li>
-                            
+                           
                         </ul>
                     </div>
                 </nav>
@@ -211,8 +196,8 @@
                                 <img src="images/portfolio/item-1.jpg" class="img-responsive" alt="this is a title" >
                                 <div class="overlay">
                                     <div class="buttons">
-                                        <a rel="gallery" class="fancybox" href="images/portfolio/item-1.jpg">Demo</a>        
-                                        <a target="_blank" href="">Details</a>
+                                                
+                                        <a target="_blank" href="license">Details</a>
                                     </div>
                                 </div>
                             </div>
@@ -235,8 +220,8 @@
                                 <img src="images/portfolio/item-2.jpg" class="img-responsive" alt="this is a title" >
                                 <div class="overlay">
                                     <div class="buttons">
-                                        <a rel="gallery" class="fancybox" href="images/portfolio/item-2.jpg">Demo</a>        
-                                        <a target="_blank" href="">Details</a>
+                                            
+                                        <a target="_blank" href="marriage">Details</a>
                                     </div>
                                 </div>
                             </div>
@@ -259,8 +244,31 @@
                                 <img src="images/portfolio/item-3.jpg" class="img-responsive" alt="" >
                                 <div class="overlay">
                                     <div class="buttons">
-                                        <a rel="gallery" class="fancybox" href="images/portfolio/item-3.jpg">Demo</a>        
-                                        <a target="_blank" href="">Details</a>
+                                               
+                                        <a target="_blank" href="death">Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <figcaption>
+                                <h4>
+                                    <a href="#">
+                                        Table Design        
+                                    </a>
+                                </h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet.
+                                </p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                     <div class="col-sm-3">
+                        <figure class="wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="300ms">
+                            <div class="img-wrapper">
+                                <img src="images/portfolio/item-5.jpg" class="img-responsive" alt="" >
+                                <div class="overlay">
+                                    <div class="buttons">
+                                             
+                                        <a target="_blank" href="pension">Details</a>
                                     </div>
                                 </div>
                             </div>
@@ -283,8 +291,8 @@
                                 <img src="images/portfolio/item-4.jpg" class="img-responsive" alt="" >
                                 <div class="overlay">
                                     <div class="buttons">
-                                        <a rel="gallery" class="fancybox" href="images/portfolio/item-4.jpg">Demo</a>        
-                                        <a target="_blank" href="">Details</a>
+                                              
+                                        <a target="_blank" href="permit">Details</a>
                                     </div>
                                 </div>
                             </div>
@@ -310,48 +318,8 @@
         ================================================== 
             Clients Section Start
         ================================================== -->
-        <section id="clients">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h2 class="subtitle text-center wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay=".3s">Our Happy Clinets</h2>
-                        <p class="subtitle-des text-center wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay=".5s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, error.</p>
-                        <div id="clients-logo" class="owl-carousel">
-                            <div>
-                                <img src="images/clients/logo-1.jpg" alt="">
-                            </div>
-                            <div>
-                                <img src="images/clients/logo-2.jpg" alt="">
-                            </div>
-                            <div>
-                                <img src="images/clients/logo-3.jpg" alt="">
-                            </div>
-                            <div>
-                                <img src="images/clients/logo-4.jpg" alt="">
-                            </div>
-                            <div>
-                                <img src="images/clients/logo-5.jpg" alt="">
-                            </div>
-                             <div>
-                                <img src="images/clients/logo-1.jpg" alt="">
-                            </div>
-                            <div>
-                                <img src="images/clients/logo-2.jpg" alt="">
-                            </div>
-                            <div>
-                                <img src="images/clients/logo-3.jpg" alt="">
-                            </div>
-                            <div>
-                                <img src="images/clients/logo-4.jpg" alt="">
-                            </div>
-                            <div>
-                                <img src="images/clients/logo-5.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        
+   
 
 
 
@@ -361,21 +329,20 @@
         ================================================== 
             Call To Action Section Start
         ================================================== -->
-        <section id="call-to-action">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="block">
-                            <h2 class="title wow fadeInDown" data-wow-delay=".3s"   data-wow-duration="500ms">SO WHAT YOU THINK ?</h1>
-                            <p class="wow fadeInDown" data-wow-delay=".5s" data-wow-duration="500ms">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis,<br>possimus commodi, fugiat magnam temporibus vero magni recusandae? Dolore, maxime praesentium.</p>
-                            <a href="contact.html" class="btn btn-default btn-contact wow fadeInDown" data-wow-delay=".7s" data-wow-duration="500ms">Contact With Me</a>
+         <section id="call-to-action">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="block">
+                                <h2 class="title wow fadeInDown" data-wow-delay=".3s" data-wow-duration="500ms">Complaint Registration</h1>
+                                <p class="wow fadeInDown" data-wow-delay=".5s" data-wow-duration="500ms">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis,<br>possimus commodi, fugiat magnam temporibus vero magni recusandae? Dolore, maxime praesentium.</p>
+                                <a href="<?php echo base_url('complaint') ?>" class="btn btn-default btn-contact wow fadeInDown" data-wow-delay=".7s" data-wow-duration="500ms">Register</a>
+                            </div>
                         </div>
+                        
                     </div>
-                    
                 </div>
-            </div>
-        </section>
-
+            </section>
 
         <!-- 
         ================================================== 

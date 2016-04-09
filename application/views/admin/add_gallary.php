@@ -19,7 +19,7 @@
 <body>
 <div class="page-wrapper">
     <div class="left-wrapper">
-        <?php echo dashboard_menu('employee');?>
+        <?php echo dashboard_menu('gallary');?>
     </div>
 
     <nav class="top-wrapper">
@@ -39,32 +39,23 @@
     </nav>
 
 	<div>	
-		
-        <?php echo form_open(base_url('Employee_Controller/add'),['enctype'=>'multipart/form-data']);?>
+		<?php echo form_open(base_url('Gallary/image'),['enctype'=>'multipart/form-data']);?>
 		<?php echo validation_errors();  ?>
+			<label for="">Name:</label>
+			<input type="text" name='name'>
+			<input type="file" name='myfiles'>
 
-		
-		<label for="name">Name</label>
-			<input type="text" name="name" id="name"><br>
-		<label for="designation">Designation</label>
-			<input type="text" name="designation" id="designation"><br>
-		<label for="address">Address</label>
-			<input type="text" name="address" id="address"><br>
-		<label for="gender">Gender</label>
-			<input type="radio" name="gender" id="gender" value="m" >male<input type="radio" name="gender" id="gender" value="f">female<br>
-		<label for="place">Place</label>
-			<input type="text" name="place" id="place"><br>
-		<label for="mobile">Mobile no</label>
-			<input type="text" name="mobileno" id="mobileno"><br>
-            <input type="file" name ="myfiles">
 
-		<button type="submit">Add</button>
-	</form>
-    <?php if(isset($message))
-        {
-            echo $message;
+			<button type="submit">Add</button>
+		<?php echo form_close() ?>
+		<?php if(isset($message))
+		{
+			echo $message;
 
-        } ?>
+		} 
+		if(isset($error))
+			echo $error?>
+
 </div>
 </body>
 </html>

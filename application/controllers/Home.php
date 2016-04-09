@@ -12,7 +12,9 @@ class Home extends CI_Controller
 		parent::__construct();
 		$this->load->helper(array('form', 'url'));
         $this->load->library('form_validation');
-          $this->load->Model('Notification_Model'); 
+          $this->load->Model('Notification_Model');
+          $this->load->Model('Upload_Model'); 
+          $this->load->Model('Employee_Model');
 
 	}
 	public function index()
@@ -21,7 +23,14 @@ class Home extends CI_Controller
 	}
 	public function about()
 	{
-		$this->load->view('about');
+		$data['gallery']=$this->Upload_Model->view();
+		$data['employee']=$this->Employee_Model->view_all();
+		$this->load->view('about',$data);
+	}
+	public function gallery()
+	{
+		$data['gallery']=$this->Upload_Model->view();
+		$this->load->view('gallery',$data);
 	}
 	public function service()
 	{
