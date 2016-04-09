@@ -11,7 +11,7 @@ class Admin_Controller extends Check_Logged
     function __construct()
 	{
 		parent::__construct();
-		$this->load->helper(['url','form']);
+		$this->load->helper(['url','form','menu']);
 		$this->load->library(['form_validation','session']);
 
 		$this->load->model('User_Model');
@@ -21,7 +21,7 @@ class Admin_Controller extends Check_Logged
 	}
 	public function index()
 	{
-		$this->load->view('admin/add_authority');
+		$this->load->view('admin/dashboard');
 	}
 
 

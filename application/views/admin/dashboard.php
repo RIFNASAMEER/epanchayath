@@ -38,13 +38,33 @@
         </div>
     </nav>
 
-	<div>	<?php 
-echo "welcome to dashbaord";
-echo anchor(base_url('Admin_Controller/logout'),'logout');
+	 <h2>welcome</h2>
+    <div class="col-md-8">
+
+    </div>
+    <div class="col-md-3">
+        <div class="row">
+            <div id="widget">
+                <div id="outline">
+                    <div class="date">
+                        <div id="month"></div>
+                        <div id="day"></div>
+                        <div id="week"></div>
+                    </div>
+                    <div class="time">
+                        <div id="hour"></div>
+                        <div id="minut"></div>
+                        <!-- <div id="second"></div> -->
+                        <div id="date"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
- ?>
  </div>
  </div>
  </body>

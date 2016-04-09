@@ -76,8 +76,9 @@
                     <!-- logo -->
                     <div class="navbar-brand">
                         <a href="index.html" >
-                            <img src="public/images/logo.png" alt="">
-                        </a>
+                           <img src="public/images/logo.png" alt="">
+                           
+                                                   </a>
                     </div>
                     <!-- /logo -->
                 </div>
@@ -90,12 +91,12 @@
                             </li>
                             <li><a href="about">About</a></li>
                             <li><a href="service">Service</a></li>
-                            <li>
-                            <a href="#">Gallery<a>
-                            </li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                    </div>
+                            <li><a href="gallery">Gallery</a></li>
+                            <li><a href="contact">Contact</a></li>
+                                    </ul>
+                                </div>
+                            
+                     
                 </nav>
                 <!-- /main nav -->
             </div>
@@ -143,13 +144,10 @@
                         <div class="col-md-6 col-sm-6">
                             <div class="block wow fadeInLeft" data-wow-delay=".3s" data-wow-duration="500ms">
                                 <h2>
-                                ABOUT ME
+                                ABOUT 
                                 </h2>
                                 <p>
-                                    Hello, I’m a UI/UX Designer & Front End Developer from Victoria, Australia. I hold a master degree of Web Design from the World University.And scrambled it to make a type specimen book. It has survived not only five centuries
-                                </p>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, adipisci voluptatum repudiandae, natus impedit repellat aut officia illum at assumenda iusto reiciendis placeat. Temporibus, vero.
+                                   Edavanna is a town, panchayath and a village situated near Manjeri in Kerala, south India. The town is situated on Calicut–Nilambur–Gudalur(CNG Road) State Highway and near the banks of Chaliyar Puzha which is the fourth longest river in the Kerala state.Koyilandy-Edavanna State Highway ends here. The name Edavanna came because of the place position. Edavanna is in between of Manjeri and Nilambur, Areacode and Nilambur, Areacode and Wandoor. The distance from Areacode, Manjeri, Nilambur and Wandoor to Edavanna is around 12 km. The Malayalam word "Edakku vannathu / Edakullathu" (meaning: situated in between) changed to Edavanna. Edavanna has a wonderful stadium known as Seethi Haji Stadium and the land is known for its tradition in furniture making.
                                 </p>
                             </div>
                             

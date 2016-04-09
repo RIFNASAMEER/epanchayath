@@ -18,7 +18,10 @@
     <div class="panel-heading">
         <h3 class="panel-title">Complaint Registration</h3>
     </div><div class="panel-body">
+
   <?php echo form_open(base_url('Permit_Controller/add_permit'),["class"=>"form-horizontal"]); ?>
+
+ 
 <div class="form-group">
 <body>
 	<label for="name">Name

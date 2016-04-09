@@ -83,30 +83,12 @@
                     <div class="main-menu">
                         <ul class="nav navbar-nav navbar-right">
                             <li>
-                                <a href="index.html" >Home</a>
+                                <a href="home" >Home</a>
                             </li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="service.html">Service</a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <span class="caret"></span></a>
-                                <div class="dropdown-menu">
-                                    <ul>
-                                        <li><a href="404.html">404 Page</a></li>
-                                        <li><a href="gallery.html">Gallery</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <span class="caret"></span></a>
-                                <div class="dropdown-menu">
-                                    <ul>
-                                        <li><a href="blog-fullwidth.html">Blog Full</a></li>
-                                        <li><a href="blog-left-sidebar.html">Blog Left sidebar</a></li>
-                                        <li><a href="blog-right-sidebar.html">Blog Right sidebar</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="about">About</a></li>
+                            <li><a href="service">Service</a></li>
+                            <li><a href="gallery">Gallery</a></li>
+                            <li><a href="contact">Contact</a></li>
                             
                         </ul>
                     </div>
@@ -141,78 +123,32 @@
             <section id="gallery" class="gallery">
                 <div class="container">
                     <div class="row">
+                     
+                      
+                                <?php 
+                                if (isset($gallery)) {
+                                
+                    foreach ($gallery as $key => $rows) {
+                    ?>
                         <div class="col-sm-4 col-xs-12">
-                            <figure class="wow fadeInLeft animated portfolio-item animated" data-wow-duration="500ms" data-wow-delay="0ms" style="visibility: visible; animation-duration: 300ms; -webkit-animation-duration: 300ms; animation-delay: 0ms; -webkit-animation-delay: 0ms; animation-name: fadeInLeft; -webkit-animation-name: fadeInLeft;">
-                                <div class="img-wrapper">
-                                    <img src="images/portfolio/item-1.jpg" class="img-responsive" alt="this is a title">
+                            <figure class="wow fadeInLeft animated animated"  data-wow-duration="500ms" data-wow-delay="500ms" style="visibility: visible; animation-duration: 300ms; -webkit-animation-duration: 300ms; animation-delay: 300ms; -webkit-animation-delay: 300ms; animation-name: fadeInLeft; -webkit-animation-name: fadeInLeft;">
+                                
+                                <div class="img-wrapper ">
+                                    <div class="img">
+                                     <img src="<?php echo base_url('/upload/'.$rows->name) ; ?>"
+                                      class="img-responsive "  alt="">
+                                      </div>
                                     <div class="overlay">
                                         <div class="buttons">
-                                            <a rel="gallery" class="fancybox" href="images/portfolio/item-1.jpg">Demo</a>
+                                            <a rel="gallery" class="fancybox" href="<?php echo base_url('/upload/'.$rows->name) ; ?>">View</a>
                                         </div>
                                     </div>
                                 </div>
                             </figure>
                         </div>
-                        <div class="col-sm-4 col-xs-12">
-                            <figure class="wow fadeInLeft animated animated" data-wow-duration="500ms" data-wow-delay="300ms" style="visibility: visible; animation-duration: 300ms; -webkit-animation-duration: 300ms; animation-delay: 300ms; -webkit-animation-delay: 300ms; animation-name: fadeInLeft; -webkit-animation-name: fadeInLeft;">
-                                <div class="img-wrapper">
-                                    <img src="images/portfolio/item-2.jpg" class="img-responsive" alt="this is a title">
-                                    <div class="overlay">
-                                        <div class="buttons">
-                                            <a rel="gallery" class="fancybox" href="images/portfolio/item-2.jpg">Demo</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </figure>
-                        </div>
-                        <div class="col-sm-4 col-xs-12">
-                            <figure class="wow fadeInLeft animated animated" data-wow-duration="500ms" data-wow-delay="500ms" style="visibility: visible; animation-duration: 300ms; -webkit-animation-duration: 300ms; animation-delay: 300ms; -webkit-animation-delay: 300ms; animation-name: fadeInLeft; -webkit-animation-name: fadeInLeft;">
-                                <div class="img-wrapper">
-                                    <img src="images/portfolio/item-3.jpg" class="img-responsive" alt="">
-                                    <div class="overlay">
-                                        <div class="buttons">
-                                            <a rel="gallery" class="fancybox" href="images/portfolio/item-3.jpg">Demo</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </figure>
-                        </div>
-                        <div class="col-sm-4 col-xs-12">
-                            <figure class="wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="700ms" style="visibility: hidden; animation-duration: 300ms; -webkit-animation-duration: 300ms; animation-delay: 600ms; -webkit-animation-delay: 600ms; animation-name: none; -webkit-animation-name: none;">
-                                <div class="img-wrapper">
-                                    <img src="images/portfolio/item-4.jpg" class="img-responsive" alt="">
-                                    <div class="overlay">
-                                        <div class="buttons">
-                                            <a rel="gallery" class="fancybox" href="images/portfolio/item-4.jpg">Demo</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </figure>
-                        </div>
-                        <div class="col-sm-4 col-xs-12">
-                            <figure class="wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="900ms" style="visibility: hidden; animation-duration: 300ms; -webkit-animation-duration: 300ms; animation-delay: 900ms; -webkit-animation-delay: 900ms; animation-name: none; -webkit-animation-name: none;">
-                                <div class="img-wrapper">
-                                    <img src="images/portfolio/item-5.jpg" class="img-responsive" alt="">
-                                    <div class="overlay">
-                                        <div class="buttons">
-                                            <a rel="gallery" class="fancybox" href="images/portfolio/item-5.jpg">Demo</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </figure>
-                        </div>
-                        <div class="col-sm-4 col-xs-12">
-                            <figure class="wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="1100ms" style="visibility: hidden; animation-duration: 300ms; -webkit-animation-duration: 300ms; animation-delay: 1200ms; -webkit-animation-delay: 1200ms; animation-name: none; -webkit-animation-name: none;">
-                                <div class="img-wrapper">
-                                    <img src="images/portfolio/item-6.jpg" class="img-responsive" alt="">
-                                    <div class="overlay">
-                                        <div class="buttons">
-                                            <a rel="gallery" class="fancybox" href="images/portfolio/item-6.jpg">Demo</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </figure>
-                        </div>
+                <?php }} ?>
+                        
+                       
                     </div>
                 </div>
             </section>
@@ -220,14 +156,14 @@
             ==================================================
             Call To Action Section Start
             ================================================== -->
-            <section id="call-to-action">
+             <section id="call-to-action">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="block">
-                                <h2 class="title wow fadeInDown" data-wow-delay=".3s" data-wow-duration="500ms">SO WHAT YOU THINK ?</h1>
+                                <h2 class="title wow fadeInDown" data-wow-delay=".3s" data-wow-duration="500ms">Complaint Registration</h1>
                                 <p class="wow fadeInDown" data-wow-delay=".5s" data-wow-duration="500ms">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis,<br>possimus commodi, fugiat magnam temporibus vero magni recusandae? Dolore, maxime praesentium.</p>
-                                <a href="#" class="btn btn-default btn-contact wow fadeInDown" data-wow-delay=".7s" data-wow-duration="500ms">Contact With Me</a>
+                                <a href="<?php echo base_url('complaint') ?>" class="btn btn-default btn-contact wow fadeInDown" data-wow-delay=".7s" data-wow-duration="500ms">Register</a>
                             </div>
                         </div>
                         
