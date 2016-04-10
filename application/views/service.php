@@ -6,7 +6,7 @@
         <meta charset="utf-8">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <link rel="icon" type="image/png" href="images/favicon.png">
-        <title>Timer Agency Template</title>
+        <title>Epanchayath</title>
         <meta name="description" content="">
         <meta name="keywords" content="">
         <meta name="author" content="">
@@ -112,7 +112,7 @@
                             <h2>Service</h2>
                             <ol class="breadcrumb">
                                 <li>
-                                    <a href="index.html">
+                                    <a href="home">
                                         <i class="ion-ios-home"></i>
                                         Home
                                     </a>
@@ -134,8 +134,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="block">
-                            <h2 class="subtitle wow fadeInUp animated" data-wow-delay=".3s" data-wow-duration="500ms">What We Love To Do</h2>
+                          <div class="block">
+                          <p>
+                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nesciunt ipsam laboriosam eum neque debitis pariatur hic ut reprehenderit, sed explicabo! Dolor veniam quasi dicta, officia impedit minus, iure rerum esse, deserunt nam autem sed maxime accusantium non facilis ipsam. Ratione magni, culpa iste explicabo natus eius labore itaque consectetur alias, debitis nemo veritatis maiores ipsum ad maxime, placeat numquam nam eum voluptas ducimus dolorem cum quibusdam sit! Delectus placeat nam excepturi quia nobis, suscipit beatae perferendis accusantium fuga, magni similique dolore esse unde, velit deserunt quam illo numquam qui ipsum fugit alias quod est vel! Velit nesciunt, iusto? Quos, quae nihil blanditiis doloremque perspiciatis maiores reiciendis aperiam possimus quibusdam dolore. Dolores repellat velit et tenetur, ex facere nam tempore, dolorem error ut odit dignissimos labore quo eos porro distinctio unde hic, maxime incidunt dolor fugiat, quod quasi ducimus optio quia! Impedit expedita minus voluptate harum architecto aspernatur labore nihil.
+                          </p>
+                           <!-- <h2 class="subtitle wow fadeInUp animated" data-wow-delay=".3s" data-wow-duration="500ms">What We Love To Do</h2>
                             <p class="subtitle-des wow fadeInUp animated" data-wow-delay=".5s" data-wow-duration="500ms">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis porro recusandae non quibusdam iure adipisci.</p>
                             <div class="row service-parts">
                                 <div class="col-md-6">
@@ -168,8 +171,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
+                    </div>  -->
+                    </div></div>
+                    <div class="col-md-6"> 
                         <div class="block">
                             <img class="img-responsive" src="images/team.jpg" alt="">
                         </div>
@@ -185,10 +189,10 @@
         ================================================== -->
         <section class="works service-page">
             <div class="container">
-                <h2 class="subtitle wow fadeInUp animated" data-wow-delay=".3s" data-wow-duration="500ms">Some Of Our Features Works</h2>
-                    <p class="subtitle-des wow fadeInUp animated" data-wow-delay=".5s" data-wow-duration="500ms">
-                        Aliquam lobortis. Maecenas vestibulum mollis diam. Pellentesque auctor neque nec urna. Nulla sit amet est. Aenean posuere <br> tortor sed cursus feugiat, nunc augue blandit nunc, eu sollicitudin urna dolor sagittis lacus.
-                    </p>
+               <!--  <h2 class="subtitle wow fadeInUp animated" data-wow-delay=".3s" data-wow-duration="500ms">Some Of Our Features Works</h2>
+                   <p class="subtitle-des wow fadeInUp animated" data-wow-delay=".5s" data-wow-duration="500ms">
+                       Aliquam lobortis. Maecenas vestibulum mollis diam. Pellentesque auctor neque nec urna. Nulla sit amet est. Aenean posuere <br> tortor sed cursus feugiat, nunc augue blandit nunc, eu sollicitudin urna dolor sagittis lacus.
+                   </p> -->
                 <div class="row">
                     <div class="col-sm-3">
                          <figure class="wow fadeInLeft animated portfolio-item" data-wow-duration="500ms" data-wow-delay="0ms">
@@ -197,18 +201,18 @@
                                 <div class="overlay">
                                     <div class="buttons">
                                                 
-                                        <a target="_blank" href="license">Details</a>
+                                        <a target="_blank" href="license">Applay Now</a>
                                     </div>
                                 </div>
                             </div>
                             <figcaption>
                                 <h4>
                                     <a href="#">
-                                        Dew Drop        
+                                        License       
                                     </a>
                                 </h4>
                                 <p>
-                                    Redesigne UI Concept
+                                   Application Form
                                 </p>
                             </figcaption>
                         </figure>
@@ -221,18 +225,18 @@
                                 <div class="overlay">
                                     <div class="buttons">
                                             
-                                        <a target="_blank" href="marriage">Details</a>
+                                        <a target="_blank" href="marriage">Applay Now</a>
                                     </div>
                                 </div>
                             </div>
                             <figcaption>
                                 <h4>
                                     <a href="#">
-                                        Bottle Mockup        
+                                       Marriage 
                                     </a>
                                 </h4>
                                 <p>
-                                    Lorem ipsum dolor sit.
+                                    Application Form
                                 </p>
                             </figcaption>
                         </figure>
@@ -245,18 +249,19 @@
                                 <div class="overlay">
                                     <div class="buttons">
                                                
-                                        <a target="_blank" href="death">Details</a>
+                                        <a target="_blank" href="death">Applay Now</a>
                                     </div>
                                 </div>
                             </div>
                             <figcaption>
                                 <h4>
                                     <a href="#">
-                                        Table Design        
+                                        Birth & Death     
                                     </a>
                                 </h4>
                                 <p>
-                                    Lorem ipsum dolor sit amet.
+                                  
+                                    Application Form
                                 </p>
                             </figcaption>
                         </figure>
@@ -268,18 +273,19 @@
                                 <div class="overlay">
                                     <div class="buttons">
                                              
-                                        <a target="_blank" href="pension">Details</a>
+                                        <a target="_blank" href="pension">Applay Now</a>
                                     </div>
                                 </div>
                             </div>
                             <figcaption>
                                 <h4>
                                     <a href="#">
-                                        Table Design        
+                                        Pension     
                                     </a>
                                 </h4>
                                 <p>
-                                    Lorem ipsum dolor sit amet.
+                                    
+                                    Application Form
                                 </p>
                             </figcaption>
                         </figure>
@@ -292,18 +298,19 @@
                                 <div class="overlay">
                                     <div class="buttons">
                                               
-                                        <a target="_blank" href="permit">Details</a>
+                                        <a target="_blank" href="permit">Applay Now</a>
                                     </div>
                                 </div>
                             </div>
                             <figcaption>
                                 <h4>
                                     <a href="#">
-                                        Make Up elements        
+                                       Permit       
                                     </a>
                                 </h4>
                                 <p>
-                                    Lorem ipsum dolor.
+                                    
+                                    Application Form
                                 </p>
                             </figcaption>
                         </figure>

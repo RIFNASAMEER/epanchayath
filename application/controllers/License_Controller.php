@@ -17,6 +17,10 @@ class License_Controller extends CI_Controller
 		$this->load->model('License_Model');
 		$this->load->model('Address_Model');
     }
+    public function index()
+    {
+    	$this->load->view('add_lisense');
+    }
 	public function add_license()
      {
      	$this->form_validation->set_rules('name', 'Name', 'required');

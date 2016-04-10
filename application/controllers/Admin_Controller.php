@@ -19,11 +19,11 @@ class Admin_Controller extends Check_Logged
 		$this->load->model('Complaint_Model');
 
 	}
-	public function index()
+	/*public function index()
 	{
 		$this->load->view('admin/dashboard');
 	}
-
+*/
 
 	public function generate()
 	{
@@ -32,7 +32,7 @@ class Admin_Controller extends Check_Logged
         var_dump(hash('sha152', 'admin'));
 	}
 
-	public function login()
+	public function index()
 	{
 		if ($this->logged ==true) {
 			$this->load->view('admin/dashboard');
@@ -45,18 +45,18 @@ class Admin_Controller extends Check_Logged
 
 	public function verify()
 	{
-		$this->form_validation->set_rules('username', 'Username', 'required');
+		$this->form_validation->set_rules('name', 'Username', 'required');
 		$this->form_validation->set_rules('password', 'Password', 'required');
 
 		if($this->form_validation->run() === FALSE)
-		{
+		{echo "string";
 			$this->load->view('admin/login');
 		}
 		else
 		{
-			$username = $this->input->post('username');
+			$username = $this->input->post('name');
 			$password = $this->input->post('password');
-            $password= md5($password);
+           // $password= $password;
 
 			if($this->User_Model->login($username,$password,'admin')){
 				$userdata = [
@@ -64,13 +64,15 @@ class Admin_Controller extends Check_Logged
 				'logged_in' =>true
 				];
 				$this->session->set_userdata('logged_in',$userdata);
-				redirect(base_url('Admin_Controller/login'));
+				redirect(base_url('Admin_Controller/index'));
 			$where = ['username' => $username,'password' => $password];
 				
 
 			if ($this->User_Model->get_where($where) != FALSE)
 			{
-				echo 'login success';
+				echo "string";
+				
+				$this->load->view('admin/dashboard');
 			}
 			else{
 				$data['message']='invalid username or password';
@@ -84,7 +86,11 @@ class Admin_Controller extends Check_Logged
 		$this->session->set_userdata('logged_in',FALSE);
 		$this->session->sess_destroy();
 
-		redirect(base_url('Admin_Controller/login'));
+		redirect(base_url('Admin_Controller'));
 	}
+	public function not_found()
+    {
+        show_404();
+    }
 }
  ?>

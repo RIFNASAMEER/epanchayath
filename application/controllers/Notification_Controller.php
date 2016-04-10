@@ -3,7 +3,8 @@
 /**
 * 
 */
-class Notification_Controller extends CI_Controller
+require_once(APPPATH.'controllers/Check_Logged.php');
+class Notification_Controller extends Check_Logged
 {
 	
  public	function __construct()

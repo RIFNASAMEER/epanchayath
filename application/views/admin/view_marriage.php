@@ -105,8 +105,32 @@
 					<td><?php echo $value->m_age; ?></td>
 					<td><?php echo $value->m_address; ?></td>
 					<td><?php echo $value->v1_name; ?></td>
-					<td><?php echo $value->v1_address; ?></td>
-					<td><?php echo $value->w_name; ?></td>
+        
+                    <?php }} ?>
+                    <th>v1_address</th>
+                    <th>w_name</th>
+                    <th>w_address</th>
+                    <th>w_dob</th>
+                    <th>w_citizen</th>
+                    <th>w_job</th>
+                    <th>w_first_married_or_not</th>
+                    <th>w_no_spouse</th>
+                    <th>wf_name</th>
+                    <th>wf_age</th>
+                    <th>wf_address</th>
+                    <th>wm_name</th>
+                    <th>wm_age</th>
+                    <th>wm_address</th>
+                    <th>v2_name</th>
+                    <th>v2_address</th>
+                    <th>Remove</th>
+                    <?php
+        if(isset($result) && !empty($result))
+        {
+         foreach ($result as $value){ ?>
+         <tr>
+                    <td><?php echo $value->v1_address; ?></td>
+                    <td><?php echo $value->w_name; ?></td>
                     <td><?php echo $value->w_address; ?></td>
                     <td><?php echo $value->w_dob; ?></td>
                     <td><?php echo $value->w_citizen; ?></td>
@@ -129,7 +153,7 @@
 					<td><?php echo $values->address; ?></td>
 					<td><?php echo $values->dob;?></td> 
 					<td><?php echo $values->emailid; ?></td>
-					<td><a href="<?php echo base_url('marriage_Controller/delete').'/'.$value->address_id;?>">delete</a></td>
+					<td><a href="<?php echo base_url('dashboard/marriage/delete/').'/'.$value->address_id;?>">delete</a></td>
 					<?php }}}}?>
  	</tr>
 		

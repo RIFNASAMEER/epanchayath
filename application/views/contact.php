@@ -6,7 +6,7 @@
         <meta charset="utf-8">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <link rel="icon" type="image/png" href="images/favicon.png">
-        <title>Timer Agency Template</title>
+      <title>Epanchayath</title>
         <meta name="description" content="">
         <meta name="keywords" content="">
         <meta name="author" content="">
@@ -82,31 +82,13 @@
                 <nav class="collapse navbar-collapse navbar-right" role="navigation">
                     <div class="main-menu">
                         <ul class="nav navbar-nav navbar-right">
-                            <li>
-                                <a href="index.html" >Home</a>
+                             <li>
+                                <a href="home" >Home</a>
                             </li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="service.html">Service</a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <span class="caret"></span></a>
-                                <div class="dropdown-menu">
-                                    <ul>
-                                        <li><a href="404.html">404 Page</a></li>
-                                        <li><a href="gallery.html">Gallery</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <span class="caret"></span></a>
-                                <div class="dropdown-menu">
-                                    <ul>
-                                        <li><a href="blog-fullwidth.html">Blog Full</a></li>
-                                        <li><a href="blog-left-sidebar.html">Blog Left sidebar</a></li>
-                                        <li><a href="blog-right-sidebar.html">Blog Right sidebar</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="about">About</a></li>
+                            <li><a href="service">Service</a></li>
+                            <li><a href="gallery">Gallery</a></li>
+                            <li><a href="contact">Contact</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -126,7 +108,7 @@
                             <h2>Contact</h2>
                             <ol class="breadcrumb">
                                 <li>
-                                    <a href="index.html">
+                                    <a href="home">
                                         <i class="ion-ios-home"></i>
                                         Home
                                     </a>
@@ -230,26 +212,7 @@
 
 
 
-        <!-- 
-        ================================================== 
-            Call To Action Section Start
-        ================================================== -->
-        <section id="call-to-action">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="block">
-                            <h2 class="title wow fadeInDown" data-wow-delay=".3s" data-wow-duration="500ms">INTERESTED IN WORKING TOGETHER? ?</h1>
-                            <p class="wow fadeInDown" data-wow-delay=".5s" data-wow-duration="500ms">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis,</br>possimus commodi, fugiat magnam temporibus vero magni recusandae? Dolore, maxime praesentium.</p>
-                            <a href="contact.html" class="btn btn-default btn-contact wow fadeInDown" data-wow-delay=".7s" data-wow-duration="500ms">Contact With Me</a>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-        </section>
-
-
+       
         <!-- 
         ================================================== 
             Footer Section Start

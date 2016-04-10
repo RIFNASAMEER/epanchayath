@@ -1,6 +1,6 @@
 <?php
-
- class Gallary extends CI_Controller
+require_once(APPPATH.'controllers/Check_Logged.php');
+ class Gallary extends Check_Logged
  {
  	
  	function __construct()

@@ -6,7 +6,7 @@
         <meta charset="utf-8">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <link rel="icon" type="image/png" href="images/favicon.png">
-        <title>Timer Agency Template</title>
+        <title>Epanchayath</title>
         <meta name="description" content="">
         <meta name="keywords" content="">
         <meta name="author" content="">
@@ -108,7 +108,7 @@
                             <h2>Gallery</h2>
                             <ol class="breadcrumb">
                                 <li>
-                                    <a href="index.html">
+                                    <a href="home">
                                         <i class="ion-ios-home"></i>
                                         Home
                                     </a>

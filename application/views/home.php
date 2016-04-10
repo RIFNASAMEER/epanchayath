@@ -6,7 +6,7 @@
         <meta charset="utf-8">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <link rel="icon" type="image/png" href="<?php echo base_url('images/favicon.png');?>">
-        <title>Timer Agency Template</title>
+       <title>Epanchayath</title>
         <meta name="description" content="">
         <meta name="keywords" content="">
         <meta name="author" content="">
@@ -115,11 +115,11 @@
                             <!-- Slider -->
                             <section class="cd-intro">
                                 <h1 class="wow fadeInUp animated cd-headline slide" data-wow-delay=".4s" >
-                                <span>HI, MY NAME IS JONATHON & I AM A</span><br>
+                                <span>Edavanna Pachayath</span><br>
                                 <span class="cd-words-wrapper">
-                                    <b class="is-visible">DESIGNER</b>
-                                    <b>DEVELOPER</b>
-                                    <b>FATHER</b>
+                                    <b class="is-visible">Lorem ipsum </b>
+                                    <b>consectetur .</b>
+                                    <b>ipsam officia  </b>
                                 </span>
                                 </h1>
                                 </section> <!-- cd-intro -->
@@ -127,7 +127,7 @@
                                 <h2 class="wow fadeInUp animated" data-wow-delay=".6s" >
                                     With 10 years experience, I've occupied many roles including digital design director,<br> web designer and developer. This site showcases some of my work.
                                 </h2>
-                                <a class="btn-lines dark light wow fadeInUp animated smooth-scroll btn btn-default btn-green" data-wow-delay=".9s" href="#works" data-section="#works" >View Works</a>
+                              
                                 
                             </div>
                         </div>

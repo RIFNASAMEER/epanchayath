@@ -36,6 +36,10 @@ class Home extends CI_Controller
 	{
 		$this->load->view('service');
 	}
+	public function contact()
+	{
+		$this->load->view('contact');
+	}
 	public function death_certificate()
 	{
 		$this->load->view('add_birth_death_form');
@@ -58,7 +62,9 @@ class Home extends CI_Controller
 	}
 	public function add_license()
 	{
-		$this->load->view('add_licenses');
+	 
+    	$this->load->view('add_license');
+    
 	}
 }
 
