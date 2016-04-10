@@ -71,10 +71,10 @@
                     <!-- /responsive nav button -->
                     
                     <!-- logo -->
-                    <div class="navbar-brand">
-                        <a href="index.html" >
-                            <img src="images/logo.png" alt="">
-                        </a>
+                   <div class="navbar-brand">
+                    
+                            <img src="images/logo.jpg" alt="">
+                 
                     </div>
                     <!-- /logo -->
                 </div>

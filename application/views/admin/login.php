@@ -122,7 +122,11 @@
             <?php echo '<div class="alert alert-danger">'.form_error('password').'</div></br>';?>
          
             <input type="submit" value="Log in">
-		</div>
+		</div><center>
+		<?php if (isset($message)) {
+		echo $message;
+	} ?></center>
 	<?php echo form_close("\n")?>
+	
 </body>
 </html>

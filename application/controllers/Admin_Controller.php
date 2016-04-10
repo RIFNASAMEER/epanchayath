@@ -19,11 +19,11 @@ class Admin_Controller extends Check_Logged
 		$this->load->model('Complaint_Model');
 
 	}
-	/*public function index()
+	public function dashboard()
 	{
 		$this->load->view('admin/dashboard');
 	}
-*/
+
 
 	public function generate()
 	{
@@ -49,7 +49,7 @@ class Admin_Controller extends Check_Logged
 		$this->form_validation->set_rules('password', 'Password', 'required');
 
 		if($this->form_validation->run() === FALSE)
-		{echo "string";
+		{
 			$this->load->view('admin/login');
 		}
 		else
@@ -59,18 +59,17 @@ class Admin_Controller extends Check_Logged
            // $password= $password;
 
 			if($this->User_Model->login($username,$password,'admin')){
+				echo "strings";
 				$userdata = [
 				'username' =>$username,
 				'logged_in' =>true
 				];
 				$this->session->set_userdata('logged_in',$userdata);
 				redirect(base_url('Admin_Controller/index'));
-			$where = ['username' => $username,'password' => $password];
+			
 				
 
-			if ($this->User_Model->get_where($where) != FALSE)
-			{
-				echo "string";
+				
 				
 				$this->load->view('admin/dashboard');
 			}
@@ -78,7 +77,8 @@ class Admin_Controller extends Check_Logged
 				$data['message']='invalid username or password';
 				$this->load->view('admin/login',$data);
 			}
-        }
+        
+
     }
 }
     public function logout()

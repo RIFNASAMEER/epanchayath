@@ -6,7 +6,7 @@
     <meta name="description" content="Psybo technologies is a small web design &amp; development agency based in Manjeri, Malappuram, INDIA. We've made a reputation for building websites that look great and are easy-to-use.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="<?php echo base_url('admin/img/ico.png');?>" type="image/png" sizes="47x54">
-    <title><?php echo ucfirst($currentPage); ?> Kudumba sree</title>
+    <title>Epanchayath</title>
     <link rel="stylesheet" href="<?php echo base_url('admin/css/styleapp.css');?>">
     <script type="text/javascript" src="<?php echo base_url('admin/js/appjs.js');?>"></script>
     <style>
@@ -19,7 +19,7 @@
 <body>
 <div class="page-wrapper">
     <div class="left-wrapper">
-        <?php echo dashboard_menu('notification');?>
+        <?php echo dashboard_menu('permit');?>
     </div>
 
     <nav class="top-wrapper">
@@ -37,17 +37,13 @@
             </ul>
         </div>
     </nav>
-</div>
+ <div style="float:left"> 
 
 <table id="testimonial" class = "table">
 <caption>View Permit</caption>
 <thead  class="header">
 <tr>
- <th>Id</th>
       <th>name</th>
-      <th>address</th>
-      <th>emailid</th>
-      <th>name_development</th>
       <th>survey_no</th>
       <th>extent</th>
       <th>nature</th>
@@ -59,7 +55,30 @@
       <th>revenue</th>
       <th>taluk</th>
       <th>district</th>
-      <th>govt_quasi</th>
+
+      
+      </tr>
+      </thead><br><br>
+      <tbody>
+      <?php
+      if(isset($result) && !empty($result))
+      {
+            foreach ($result as $value){ ?>
+               <tr>
+                 
+                 <td><?php echo $value->name; ?></td>
+                 <td><?php echo $value->survey_no; ?></td>
+                 <td><?php echo $value->extent; ?></td>
+                 <td><?php echo $value->nature; ?></td>
+                 <td><?php echo $value->date; ?></td>
+                 <td><?php echo $value->office; ?></td>
+                 <td><?php echo $value->division; ?></td>
+                 <td><?php echo $value->ward; ?></td>
+                 <td><?php echo $value->no_building; ?></td>
+                 <td><?php echo $value->revenue; ?></td>
+                 <td><?php echo $value->taluk; ?></td><br><br>
+                 <?php }}?>
+                 <th>govt_quasi</th>
       <th>plinth_area</th>
       <th>basement_floor</th>
       <th>ground_floor</th>
@@ -73,28 +92,10 @@
       <th>amount</th>
       <th>number_date</th>
       <th>document_details</th>
-       <th>Remove</th>
-      </tr>
-      </thead>
-      <tbody>
-      <?php
+       <th>Remove</th><?php
       if(isset($result) && !empty($result))
       {
             foreach ($result as $value){ ?>
-               <tr>
-                 <td><?php echo $value->id; ?></td>
-                 <td><?php echo $value->name; ?></td>
-                 <td><?php echo $value->name_development; ?></td>
-                 <td><?php echo $value->survey_no; ?></td>
-                 <td><?php echo $value->extent; ?></td>
-                 <td><?php echo $value->nature; ?></td>
-                 <td><?php echo $value->date; ?></td>
-                 <td><?php echo $value->office; ?></td>
-                 <td><?php echo $value->division; ?></td>
-                 <td><?php echo $value->ward; ?></td>
-                 <td><?php echo $value->no_building; ?></td>
-                 <td><?php echo $value->revenue; ?></td>
-                 <td><?php echo $value->taluk; ?></td>
                  <td><?php echo $value->district; ?></td>
                  <td><?php echo $value->govt_quasi; ?></td>
                  <td><?php echo $value->plinth_area; ?></td>
@@ -111,16 +112,10 @@
                  <td><?php echo $value->number_date; ?></td>
                  <td><?php echo $value->document_details; ?></td>
 
-                   <?php
-                   foreach ($address as $values) {
-                      if($values->id == $value->address_id){
-
-                          ?>
-                          <td><?php echo $value->address; ?></td>
-                          <td><?php echo $value->emailid; ?></td>
-                          <td><a href="<?php echo base_url('Permit_Controller/delete'). '/'.$value->address_id;?>">delete</a>
-                          </td>
-                          <?php }}}}?>
+                   
+                   
+                          <td><a href="<?php echo base_url('dashboard/permit/delete/').'/'.$value->id;?>">delete</a></td>
+                          <?php }}?>
                           </tr>
                           </tbody></table></div>
 </div>

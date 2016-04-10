@@ -6,7 +6,7 @@
     <meta name="description" content="Psybo technologies is a small web design &amp; development agency based in Manjeri, Malappuram, INDIA. We've made a reputation for building websites that look great and are easy-to-use.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="<?php echo base_url('admin/img/ico.png');?>" type="image/png" sizes="47x54">
-    <title><?php echo ucfirst($currentPage); ?> Kudumba sree</title>
+    <title>Epanchayath</title>
     <link rel="stylesheet" href="<?php echo base_url('admin/css/styleapp.css');?>">
     <script type="text/javascript" src="<?php echo base_url('admin/js/appjs.js');?>"></script>
     <style>
@@ -37,10 +37,19 @@
             </ul>
         </div>
     </nav>
-
+       
+        
 	 <h2>welcome</h2>
     <div class="col-md-8">
-
+        <form action="">
+                <label for="">Email</label>
+                <input type="text"><br>
+                 <label for=""> Name of the certificate</label>
+                  <input type="text"><br>
+                <input type="file">
+                <button type="submit">submit</button>
+            </form>
+         
     </div>
     <div class="col-md-3">
         <div class="row">
@@ -63,9 +72,12 @@
     </div>
 </div>
 
-
+ 
+         
 
  </div>
+
  </div>
+
  </body>
  </html>

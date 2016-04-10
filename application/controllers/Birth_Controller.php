@@ -11,7 +11,7 @@ class Birth_Controller extends CI_Controller
 	{
 		parent::__construct();
 		
-		$this->load->helper(['url','form']);
+		$this->load->helper(['url','form','menu']);
 		$this->load->library(['form_validation']);
         
         $this->load->model('Address_Model');
@@ -106,7 +106,7 @@ class Birth_Controller extends CI_Controller
 			 }
 			if($this->Birth_Model->add($data) != FALSE)
 				{
-				redirect(base_url('Birth_Controller/view'));
+				redirect(base_url('service'));
 				}
 				else
 					var_dump('failed');

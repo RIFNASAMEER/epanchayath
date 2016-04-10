@@ -75,12 +75,10 @@
                     
                     <!-- logo -->
                     <div class="navbar-brand">
-                        <a href="index.html" >
-                           <img src="public/images/logo.png" alt="">
-                           
-                                                   </a>
-                    </div>
-                    <!-- /logo -->
+                    
+                            <img src="images/logo.jpg" alt="">
+                 
+                    </div>                    <!-- /logo -->
                 </div>
                 <!-- main menu -->
                 <nav class="collapse navbar-collapse navbar-right" role="navigation">

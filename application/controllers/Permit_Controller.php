@@ -127,7 +127,7 @@ class Permit_Controller extends CI_Controller
 			}
 			if($this->Permit_Model->add_permit($data) !=FALSE)
 			{
-				redirect(base_url('Permit_Controller/view'));
+				redirect(base_url('service'));
 			}
 			else
 				redirect(base_url('Permit_Controller/add_permit'));
@@ -142,12 +142,11 @@ class Permit_Controller extends CI_Controller
 	public function delete($id)
 	{
 		$delete=$this->Permit_Model->delete($id);
-		if($delete)
-	{
-		$delete=$this->Address_Model->delete($id);
+	
+		
 		redirect(base_url('Permit_Controller/view'));
 
-	}
+	
 }
 }
 			

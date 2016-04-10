@@ -36,7 +36,7 @@
  	public function delete($id)
 
  	{
- 		$this->db->where('address_id',$id);
+ 		$this->db->where('id',$id);
  		return $this->db->delete('permit');
  	}
  }

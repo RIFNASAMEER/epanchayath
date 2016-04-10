@@ -18,6 +18,7 @@ class Marriage_Controller extends CI_Controller
 	}
 	public function add()
 	{
+		
 		$this->form_validation->set_rules('date', 'Date','required');
 		$this->form_validation->set_rules('ma_place', 'place of marriage','required');
 		$this->form_validation->set_rules('hus_name', 'husband name','required');
@@ -138,7 +139,7 @@ class Marriage_Controller extends CI_Controller
 			if($this->Marriage_Model->add($data) != FALSE)
 				{
 			
-				redirect(base_url('Marriage_Controller/view'));
+				 redirect(base_url('service'));
 				}
 				else
 		            redirect(base_url('Marriage_Controller/add'));

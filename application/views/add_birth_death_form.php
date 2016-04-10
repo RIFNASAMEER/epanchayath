@@ -108,7 +108,7 @@
     			</div>
     			<div class="form-group">
     				<label for="Date Of Death/Birth" class="control-label col-xs-4">Date Of Death/Birth :</label>
-    				<div class="col-xs-8"><input type="text" name="date" class="form-control"></input><br></div>
+    				<div class="col-xs-8"><input type="date" name="date" class="form-control"></input><br></div>
     			</div>
 		        <div class="form-group">
 			    <label for="Purpose Of The Certificate" class="control-label col-xs-4">Purpose Of The Certificate:</label>

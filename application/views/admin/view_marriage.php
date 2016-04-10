@@ -9,7 +9,7 @@
     <meta name="description" content="Psybo technologies is a small web design &amp; development agency based in Manjeri, Malappuram, INDIA. We've made a reputation for building websites that look great and are easy-to-use.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="<?php echo base_url('admin/img/ico.png');?>" type="image/png" sizes="47x54">
-    <title><?php echo ucfirst($currentPage); ?> Kudumba sree</title>
+    <title>Epanchayath</title>
     <link rel="stylesheet" href="<?php echo base_url('admin/css/styleapp.css');?>">
     <script type="text/javascript" src="<?php echo base_url('admin/js/appjs.js');?>"></script>
     <style>
@@ -41,48 +41,27 @@
         </div>
     </nav>
 
-	<div>	
+  <div style="float:left"> 	
   <table border="1px">
  	<caption>Marriage Registration Table</caption>
  	<thead>
  		<tr>
- 			<th>Id</th>
+ 			
  			<th>date</th>
  			<th>ma_place</th>
  			<th>hus_name</th>
- 			<th>address</th>
- 			<th>dob</th>
+ 		
  			<th>emailid</th>
  			<th>citizen</th>
  			<th>job</th>
  			<th>h_first_married_or_not</th>
  			<th>hno_spouse</th>
- 			<th>f_name</th>
- 			<th>f_age</th>
- 			<th>f_address</th>
+ 			<th>f_name</th>			
  			<th>m_name</th>
- 			<th>m_age</th>
- 			<th>m_address</th>
  			<th>v1_name</th>
- 			<th>v1_address</th>
- 			<th>w_name</th>
- 			<th>w_address</th>
- 			<th>w_dob</th>
- 			<th>w_citizen</th>
- 			<th>w_job</th>
- 			<th>w_first_married_or_not</th>
- 			<th>w_no_spouse</th>
- 			<th>wf_name</th>
- 			<th>wf_age</th>
- 			<th>wf_address</th>
- 			<th>wm_name</th>
- 			<th>wm_age</th>
- 			<th>wm_address</th>
- 			<th>v2_name</th>
- 			<th>v2_address</th>
- 			<th>Remove</th>
+ 			
  		</tr>
- 	</thead>
+ 	</thead><
  	<tbody>
  	<tr>
         <?php
@@ -99,14 +78,12 @@
 					<td><?php echo $value->h_first_married_or_not; ?></td>
 					<td><?php echo $value->hno_spouse; ?></td>
 					<td><?php echo $value->f_name; ?></td>
-					<td><?php echo $value->f_age; ?></td>
-					<td><?php echo $value->f_address; ?></td>
 					<td><?php echo $value->m_name; ?></td>
 					<td><?php echo $value->m_age; ?></td>
 					<td><?php echo $value->m_address; ?></td>
 					<td><?php echo $value->v1_name; ?></td>
         
-                    <?php }} ?>
+                    <?php }} ?></tr></tr></tbody><br><br><thead>
                     <th>v1_address</th>
                     <th>w_name</th>
                     <th>w_address</th>
@@ -116,14 +93,13 @@
                     <th>w_first_married_or_not</th>
                     <th>w_no_spouse</th>
                     <th>wf_name</th>
-                    <th>wf_age</th>
-                    <th>wf_address</th>
+                
+                  
                     <th>wm_name</th>
-                    <th>wm_age</th>
-                    <th>wm_address</th>
+                    
                     <th>v2_name</th>
-                    <th>v2_address</th>
-                    <th>Remove</th>
+                    
+                    <th>Remove</th></thead><tbody>
                     <?php
         if(isset($result) && !empty($result))
         {
@@ -141,8 +117,6 @@
                     <td><?php echo $value->wf_age; ?></td>
  					<td><?php echo $value->wf_address; ?></td>
  					<td><?php echo $value->wm_name; ?></td>
- 					<td><?php echo $value->wm_age; ?></td>
- 					<td><?php echo $value->wm_address; ?></td>
  					<td><?php echo $value->v2_name; ?></td>
  					<td><?php echo $value->v2_address; ?></td>
                     <?php 
@@ -150,11 +124,9 @@
 						if($values->id == $value->address_id){
 						
 					?>
-					<td><?php echo $values->address; ?></td>
-					<td><?php echo $values->dob;?></td> 
-					<td><?php echo $values->emailid; ?></td>
+					
 					<td><a href="<?php echo base_url('dashboard/marriage/delete/').'/'.$value->address_id;?>">delete</a></td>
 					<?php }}}}?>
  	</tr>
 		
-		</tr></tbody></table></div></body></html><
+		</tr></tbody></table></div></body></html>

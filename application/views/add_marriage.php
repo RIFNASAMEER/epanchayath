@@ -14,18 +14,18 @@
 
 	<div class="container">
     	
-			<form action="<?php echo base_url('Marriage_Controller/add') ?>" accept-charset="utf-8">
+			<form action="<?php echo base_url('Marriage_Controller/add') ?>" method="post" accept-charset="utf-8">
 	     	<?php echo validation_errors();  ?>
 	     	<div class="row">
 			<div class="col-md-6 col-sm-6 col-xs-12">
 			<div class="form-group ">
 				<label for="date">Date of Marriage :</label>
-				<input type="text"  class="form-control input-lg" name="date" placeholder="yyyy/mm/dd">
+				<input type="date"  class="form-control input-lg" name="date" placeholder="yyyy/mm/dd" required>
 			</div>
 			</div><div class="col-md-6 col-sm-6 col-xs-12">
 			<div class="form-group ">
 			<label for="place">Place of Marriage :</label>
-				<input type="text"  class="form-control input-lg" name="ma_place" >
+				<input type="text"  class="form-control input-lg" name="ma_place" required>
 		
 			</div></div>
 			</div>
@@ -39,35 +39,27 @@
 			<div class="col-md-6 col-sm-6 col-xs-12">
 				<div class="form-group">
 					<label  for="name">Name :</label>
-					<input type="text"  class="form-control" name="hus_name" id="hus_name">
+					<input type="text"  class="form-control" name="hus_name" required id="hus_name">
 				</div>
 			</div>
 			<div class="col-md-6 col-sm-6 col-xs-12">
 				<div class="form-group">
 					<label  for="address">Address :</label>
-					<textarea  class="form-control" name="address" id="address"></textarea>
+					<textarea  class="form-control" name="address" required id="address"></textarea>
 				</div>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-md-6 col-sm-6 col-xs-12">
-				<div class="form-group">
+				<div class="form-group">s
 				<label  for="dob">DOB :</label>
-					<select   name="dob">
-					<option value="1">1</option>
-					</select>
-					<select   name="dob">
-						<option value="1">1</option>
-					</select>
-					<select   name="dob">
-						<option value="1990">1990</option>
-					</select>
+					<input type="date" name="dob">
 				</div>
 			</div>
 			<div class="col-md-6 col-sm-6 col-xs-12">
 				<div class="form-group">
 					<label  for="email">email :</label>
-					<input type="text"  class="form-control" name="emailid" id="emailid">
+					<input type="text"  class="form-control" name="emailid" required id="emailid">
 				</div>
 			</div>
 		</div>
@@ -76,12 +68,12 @@
 			<div class="col-md-6 col-sm-6 col-xs-12">
 				<div class="form-group">
 					<label  for="citizen">citizen :</label>
-					<input type="text"  class="form-control" name="citizen" id="citizen"></div>
+					<input type="text"  class="form-control" name="citizen" required id="citizen"></div>
 				</div>
 			<div class="col-md-6 col-sm-6 col-xs-12">
 				<div class="form-group">
 					<label  for="job">Job :</label>
-					<input type="text"  class="form-control" name="job" id="job">
+					<input type="text"  class="form-control" name="job" required id="job">
 				</div>
 			</div>
 		</div>
@@ -96,7 +88,7 @@
 			<div class="col-md-6 col-sm-6 col-xs-12">
 				<div class="form-group">
 					<label  for="no of spouse">Number of Spouse(any spouse are living) :</label>
-					<input type="text"  class="form-control" name="hno_spouse" id="hno_spouse">
+					<input type="text"  class="form-control" name="hno_spouse" required id="hno_spouse">
 				</div>
 			</div>
 		</div>
@@ -104,13 +96,13 @@
 			<div class="col-md-6 col-sm-6 col-xs-12">
 				<div class="form-group">
 					<label  for="father_name">Father Name/Name of Guardian  :</label>
-					<input type="text"  class="form-control" name="f_name" id="f_name">
+					<input type="text"  class="form-control" name="f_name" required id="f_name">
 				</div>
 			</div>
 			<div class="col-md-6 col-sm-6 col-xs-12">
 				<div class="form-group">
 					<label  for="age">Age :</label>
-					<input type="text"  class="form-control" name="f_age" id="f_age">
+					<input type="text"  class="form-control" name="f_age" required id="f_age">
 				</div>
 			</div>
 		</div>
@@ -118,13 +110,13 @@
 			<div class="col-md-6 col-sm-6 col-xs-12">
 				<div class="form-group">
 					<label  for="address">Address :</label>
-					<textarea  class="form-control" name="f_address" id="f_address"></textarea>
+					<textarea  class="form-control" name="f_address" required id="f_address"></textarea>
 				</div>
 			</div>
 			<div class="col-md-6 col-sm-6 col-xs-12">
 				<div class="form-group">
 					<label  for="mother">Mother Name :</label>
-					<input type="text"  class="form-control" name="m_name" id="mother_name">
+					<input type="text"  class="form-control" name="m_name" required id="mother_name">
 				</div>
 			</div>
 		</div>
@@ -132,13 +124,13 @@
 			<div class="col-md-6 col-sm-6 col-xs-12">
 				<div class="form-group">
 					<label  for="m_age">Age :</label>
-					<input type="text"  class="form-control" name="m_age" id="m_age">
+					<input type="text"  class="form-control" name="m_age" required id="m_age">
 				</div>
 			</div>
 			<div class="col-md-6 col-sm-6 col-xs-12">	
 				<div class="form-group">
 					<label  for="m_address">Address :</label>
-					<textarea  class="form-control" name="m_address" id="m_address"></textarea>
+					<textarea  class="form-control" name="m_address" required id="m_address"></textarea>
 				</div>
 			</div>
 		</div>
@@ -146,13 +138,13 @@
 			<div class="col-md-6 col-sm-6 col-xs-12">
 				<div class="form-group">
 					<label  for="victim_name">Victim Name :</label>
-					<input type="text"  class="form-control" name="v1_name" id="v1_name">
+					<input type="text"  class="form-control" name="v1_name" required id="v1_name">
 				</div>
 			</div>
 			<div class="col-md-6 col-sm-6 col-xs-12">
 				<div class="form-group">
 					<label  for="v_address">Address :</label>
-					<textarea  class="form-control" name="v1_address" id="v1_address"></textarea>
+					<textarea  class="form-control" name="v1_address" required id="v1_address"></textarea>
 				</div>
 			</div>
 		</div></div></div>
@@ -164,13 +156,13 @@
 			<div class="col-md-6 col-sm-6 col-xs-12">
 				<div class="form-group">
 					<label  for="name">Name :</label>
-					<input type="text"  class="form-control" name="w_name" id="w_name">
+					<input type="text"  class="form-control" name="w_name" required id="w_name">
 				</div>
 			</div>
 			<div class="col-md-6 col-sm-6 col-xs-12">
 				<div class="form-group">
 					<label class="control-label col-xs-2" for="address">Address:</label>
-					<textarea  class="form-control" name="w_address" id="w_address"></textarea>
+					<textarea  class="form-control" name="w_address" required id="w_address"></textarea>
 				</div>
 			</div>
 		</div>
@@ -178,21 +170,13 @@
 			<div class="col-md-6 col-sm-6 col-xs-12">
 				<div class="form-group">
 					<label class="control-label col-xs-2" for="w_dob">DOB :</label>
-				    <select   name="w_dob">
-					 <option value="1">1</option>
-					</select>
-					<select   name="w_dob">
-					 <option value="1">1</option>
-					</select>
-					<select   name="w_dob">
-						<option value="1953" >1953</option>
-					</select>
+				   <input type="date" name="w_dob">
 				</div>
 			</div>
 			<div class="col-md-6 col-sm-6 col-xs-12">
 				<div class="form-group">
 					<label class="control-label col-xs-2" for="citizen">citizen :</label>
-					<input type="text"  class="form-control" name="w_citizen" id="w_citizen">
+					<input type="text"  class="form-control" name="w_citizen" required id="w_citizen">
 				</div>
 			</div>
 		</div>
@@ -200,7 +184,7 @@
 			<div class="col-md-6 col-sm-6 col-xs-12">
 				<div class="form-group">
 					<label  for="job">Job  :</label>
-					<input type="text"  class="form-control" name="w_job" id="w_job">
+					<input type="text"  class="form-control" name="w_job" required id="w_job">
 				</div>
 			</div>
 			<div class="col-md-6 col-sm-6 col-xs-12">
@@ -215,12 +199,12 @@
 			<div class="col-md-6 col-sm-6 col-xs-12">
 				<div class="form-group">
 					<label for="no of spouse">Number of Spouse(any spouse are living) :</label>
-					<input type="text"  class="form-control" name="w_no_spouse" id="w_no_spouse"></div>
+					<input type="text"  class="form-control" name="w_no_spouse" required id="w_no_spouse"></div>
 				</div>
 			<div class="col-md-6 col-sm-6 col-xs-12">
 				<div class="form-group">
 					<label for="father_name">Father Name/Name of Guardian :</label>
-					<br><input type="text"  class="form-control" name="wf_name" id="wf_name">
+					<br><input type="text"  class="form-control" name="wf_name" required id="wf_name">
 				</div>
 			</div>
 		</div>
@@ -228,13 +212,13 @@
 			<div class="col-md-6 col-sm-6 col-xs-12">
 				<div class="form-group">
 					<label class="control-label col-xs-2" for="age">Age </label>
-					<input type="text"  class="form-control" name="wf_age" id="wf_age">
+					<input type="text"  class="form-control" name="wf_age" required id="wf_age">
 				</div>
 			</div>
 			<div class="col-md-6 col-sm-6 col-xs-12">
 				<div class="form-group">
 					<label class="control-label col-xs-2" for="address">Address :</label>
-					<textarea  class="form-control" name="wf_address" id="wf_address"></textarea></textarea>
+					<textarea  class="form-control" name="wf_address" required id="wf_address"></textarea></textarea>
 				</div>
 			</div>
 		</div>
@@ -242,13 +226,13 @@
 			<div class="col-md-6 col-sm-6 col-xs-12">
 				<div class="form-group">
 					<label  for="mother">Mother Name :</label>
-					<input type="text"  class="form-control" name="wm_name" id="wm_name">
+					<input type="text"  class="form-control" name="wm_name" required id="wm_name">
 				</div>
 			</div>
 			<div class="col-md-6 col-sm-6 col-xs-12">
 				<div class="form-group">
 					<label for="m_age">Mother Age :</label>
-					<input type="text"  class="form-control" name="wm_age" id="wm_age">
+					<input type="text"  class="form-control" name="wm_age" required id="wm_age">
 				</div>
 			</div>
 		</div>
@@ -256,19 +240,19 @@
 			<div class="col-md-6 col-sm-6 col-xs-12">
 				<div class="form-group">
 					<label for="m_address">Mother Address :</label>
-					<textarea  class="form-control" name="wm_address" id="wm_address"></textarea>
+					<textarea  class="form-control" name="wm_address" required id="wm_address"></textarea>
 				</div>
 			</div>
 			<div class="col-md-6 col-sm-6 col-xs-12">
 			<div class="form-group">
 				<label  for="victim_name">Name Of Second Victim:</label>
-				<input type="text"  class="form-control" name="v2_name" id="v2_name"></div>
+				<input type="text"  class="form-control" name="v2_name" required id="v2_name"></div>
 			</div>
 		</div>
 		<div class="col-md-6 col-sm-6 col-xs-12">
 		<div class="form-group">
 			<label for="v_address">Address Of Second Victim:</label>
-			<textarea  class="form-control" name="v2_address" id="v2_address"></textarea>
+			<textarea  class="form-control" name="v2_address" required id="v2_address"></textarea>
 		</div>
 		</div>
 		</div></div>

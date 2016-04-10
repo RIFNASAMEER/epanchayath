@@ -28,6 +28,7 @@ class Employee_Controller extends Check_Logged
 	
  	public function add()
 	{
+		
 		$this->form_validation->set_rules('name', 'Name','required');
 		$this->form_validation->set_rules('gender', 'Gender','required');
 		$this->form_validation->set_rules('designation', 'Desigantion','required');

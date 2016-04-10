@@ -27,19 +27,19 @@
     <div class="form-group">
 		<label for="" class="control-label col-xs-4">Name</label>
 		<div class="col-xs-8">
-			<input type="text" name="name" id="name"><br>
+			<input required type="text" name="name"  class="form-control" id="name"><br>
 		</div>
 	</div>
 	<div class="form-group">
 		<label for="" class="control-label col-xs-4">House Number :</label>
 		<div class="col-xs-8">
-			<input type="text" name="houseno" id="houseno"><br>
+			<input required type="text" name="houseno"  class="form-control"id="houseno"><br>
 		</div>
 	</div>
 	<div class="form-group">
 		<label for="" class="control-label col-xs-4">Landmark :</label>
 		<div class="col-xs-8">
-			<input type="text" name="landmark" id="landmark"><br>
+			<input required type="text" name="landmark" class="form-control" id="landmark"><br>
 		</div>
 	</div>
 	<div class="form-group">
@@ -63,80 +63,80 @@
 		<div class="col-xs-8">
 			<input type="radio" name="gender" value="m">MALE</div>
 		<div class="col-xs-8">
-			<input type="radio" name="gender" value="f">FEMALE</input><br/></div>
+			<input type="radio" name="gender"  value="f">FEMALE</input><br/></div>
 	
 	</div>
 	<div class="form-group">
 		<label for="" class="control-label col-xs-4">Disease:</label>
 		<div class="col-xs-8">
-			<input type="text" name="disease" id="disease"><br/>
+			<input required type="text" name="disease" class="form-control" id="disease"><br/>
 		</div>
 	</div>
 	<div class="form-group">
 		<label for="" class="control-label col-xs-4">Number Of Years In Kerela:</label>
 		<div class="col-xs-8">
-			<input type="text" name="no_ofyears_inkerala" id="no_ofyears_inkerala"><br/>
+			<input required type="text" name="no_ofyears_inkerala" class="form-control" id="no_ofyears_inkerala"><br/>
 		</div>
 	</div>
 	<div class="form-group">
 		<label for="" class="control-label col-xs-4">Ration Card Number:
 		</label>
 		<div class="col-xs-8">
-			<input type="text" name="rationcardno" id="rationcardno"><br/>
+			<input required type="text" name="rationcardno" class="form-control" id="rationcardno"><br/>
 		</div>
 	</div>
 	<div class="form-group">
 		<label for="" class="control-label col-xs-4">BPL Card Number:</label>
 		<div class="col-xs-8">
-			<input type="text" name="bplcardno" id="bplcardno"><br/>
+			<input required type="text" name="bplcardno" class="form-control" id="bplcardno"><br/>
 		</div>
 	</div>
 	<div class="form-group">
 		<label for="" class="control-label col-xs-4">ID Card Number:</label>
 		<div class="col-xs-8">
-			<input type="text" name="idcardno" id="idcardno"><br/>
+			<input required type="text" name="idcardno"  class="form-control"id="idcardno"><br/>
 		</div>
 	</div>
 	<div class="form-group">
 		<label for="" class="control-label col-xs-4">Name Of Ward Councilor(ward member):</label>
 		<div class="col-xs-8">
-			<input type="text" name="wardcouncilor" id="wardcouncilor"><br/>
+			<input required type="text" name="wardcouncilor"  class="form-control"id="wardcouncilor"><br/>
 		</div>
 	</div>
 	<div class="form-group">
 		<label for="" class="control-label col-xs-4">Indegently :</label>
 		<div class="col-xs-8">
-			<input type="text" name="intigently" id="intigently"><br/>
+			<input required type="text" name="intigently"  class="form-control"id="intigently"><br/>
 		</div>
 	</div>
 	<div class="form-group">
 		<label for="" class="control-label col-xs-4">Begger :</label>
 		<div class="col-xs-8">
-			<input type="text" name="begger" id="begger"><br/>
+			<input required type="text" name="begger"  class="form-control" id="begger"><br/>
 		</div>
 	</div>
 	<div class="form-group">
 		<label for="" class="control-label col-xs-4">Martial Status :</label>
 		<div class="col-xs-8">
-			<input type="text" name="marcialstatus" id="marcialstatus"><br/>
+			<input required type="text" name="marcialstatus"  class="form-control" id="marcialstatus"><br/>
 		</div>
 	</div>
 	<div class="form-group">
 		<label for="" class="control-label col-xs-4">Husband/Wife:</label>
 		<div class="col-xs-8">
-			<input type="text" name="husbend_wife" id="husbend_wife"><br/>
+			<input required type="text" name="husbend_wife"  class="form-control" id="husbend_wife"><br/>
 		</div>
 	</div>
 	<div class="form-group">
 		<label for="" class="control-label col-xs-4">Annual Income:</label>
 		<div class="col-xs-8">
-			<input type="text" name="annualincome" id="annualincome"><br/>
+			<input required type="text" name="annualincome"  class="form-control" id="annualincome"><br/>
 		</div>
 	</div>
 	<div class="form-group">
 		<label for="" class="control-label col-xs-4">Contact(Email/mobile):</label>
 		<div class="col-xs-8">
-			<input type="text" name="contact" id="contact"><br/>
+			<input required type="text" name="contact"  class="form-control" id="contact"><br/>
 		</div>
 	</div>
 	<div class="form-group">

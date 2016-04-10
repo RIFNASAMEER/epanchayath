@@ -72,9 +72,9 @@
                     
                     <!-- logo -->
                     <div class="navbar-brand">
-                        <a href="index.html" >
-                            <img src="images/logo.png" alt="">
-                        </a>
+                    
+                            <img src="images/logo.jpg" alt="">
+                 
                     </div>
                     <!-- /logo -->
                 </div>
@@ -137,7 +137,7 @@
                                  consectetur adipisicing elit. Dolore, ea!
                             </p>
                             <div class="contact-form">
-                                <form id="contact-form" method="post" action="sendmail.php" role="form">
+                                <form id="contact-form" method="post" action="contact" role="form">
                         
                                     <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".6s">
                                         <input type="text" placeholder="Your Name" class="form-control" name="name" id="name">
@@ -182,13 +182,13 @@
                     <div class="col-md-3">
                         <div class="address wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".3s">
                             <i class="ion-ios-location-outline"></i>
-                            <h5>125 , Kings Street,Melbourne <br>United Kingdom,600562</h5>
+                            <h5>Edavannapanchayath <br>Edavanna 676541</h5>
                         </div>
                     </div>
                     <div class="col-md-3">
                         <div class="address wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".5s">
                             <i class="ion-ios-location-outline"></i>
-                            <h5>125 , Kings Street,Melbourne <br>United Kingdom,600562</h5>
+                            <h5>Edavannapanchayath <br>Edavanna 676541</h5>
                         </div>
                     </div>
                     <div class="col-md-3">

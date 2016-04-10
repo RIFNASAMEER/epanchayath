@@ -22,18 +22,18 @@
   <?php echo form_open(base_url('Complaint_Controller/add'),["class"=>"form-horizontal"]); ?>
     <div class="form-group">
      <label for="" class="control-label col-xs-2">Name:</label>
-     <div class="col-xs-10"><input type="text" name="name" class="form-control"><br></div>
+     <div class="col-xs-10"><input  required type="text" name="name" class="form-control"><br></div>
       <?php echo form_error('name'); ?><br></div>
     <div class="form-group">
       <label for="" class="control-label col-xs-2">Email:</label>
-      <div class="col-xs-10"><input type="email" name="email" class="form-control"><br></div>
+      <div class="col-xs-10"><input  required type="email" name="email" class="form-control"><br></div>
       <?php echo form_error('email'); ?><br></div>
     <div class="form-group">
       <label for="" class="control-label col-xs-2">Complaint:</label>
       <div class="col-xs-10"> <textarea name="complaint"  class="form-control"></textarea><br></div>
       <?php echo form_error('complaint'); ?><br></div>
    	  <div class="col-xs-offset-2 col-xs-10">
-        <button type="submit"class="btn btn-primary">Add</button></div>
+        <button  required type="submit"class="btn btn-primary">Add</button></div>
     </form></div></div>
 </body>
 </html>

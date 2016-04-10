@@ -88,7 +88,7 @@ class Pension_Controller extends CI_Controller
 			];
 			if($this->Pension_Model->add($data) !=FAlSE)
 			{
-			 redirect(base_url('Pension_Controller/view'));
+			 redirect(base_url('service'));
 			}
 			else
 				redirect(base_url('Pension_Controller/add'));

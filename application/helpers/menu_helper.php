@@ -141,6 +141,11 @@ function dashboard_menu($current)
             'icon' => 'fa-folder',
             'link' => 'gallery'
         ],
+        'license' => [
+            'title' => 'license',
+            'icon' => 'fa-folder',
+            'link' => 'license'
+        ],
        
          
     ];

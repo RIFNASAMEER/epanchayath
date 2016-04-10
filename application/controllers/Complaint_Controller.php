@@ -43,7 +43,7 @@ class Complaint_Controller extends CI_Controller
 			];
 			if($this->Complaint_Model->add($data) !=FAlSE)
 			{
-			 redirect(base_url('Home'));
+			 redirect(base_url('home'));
 			}
 			else
 				redirect(base_url('Complaint_Controller/add'));

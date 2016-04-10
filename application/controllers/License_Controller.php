@@ -13,7 +13,7 @@ class License_Controller extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->library(['form_validation']);
-		$this->load->helper(['url','form']);
+		$this->load->helper(['url','form','menu']);
 		$this->load->model('License_Model');
 		$this->load->model('Address_Model');
     }
@@ -107,7 +107,7 @@ class License_Controller extends CI_Controller
 			}
 			if($this->License_Model->add_license($data) != FALSE)
 			{
-				redirect(base_url('License_Controller/view'));
+				redirect(base_url('service'));
 			}
 			else
 				redirect(base_url('License_Controller/add_license'));

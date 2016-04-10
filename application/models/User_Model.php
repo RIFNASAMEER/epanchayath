@@ -20,7 +20,7 @@ class User_Model extends CI_Model
 
 		$this->db->where($where);
 		$query = $this->db->get('users');
-		var_dump($where);
+		
 		if ($query->num_rows() >= 1) {
 			return TRUE;
 		}
